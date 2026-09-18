@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevFest Ogbomoso 2026
 
-## Getting Started
+Official website for DevFest Ogbomoso 2026, hosted by GDG Ogbomoso.
+**Saturday, 17 October 2026 · 9:00 AM – 4:00 PM (GMT+1) · Ogbomoso, Oyo State.**
 
-First, run the development server:
+Built with Next.js 16 (App Router), React 19, Tailwind CSS v4 and TypeScript.
+
+## Getting started
 
 ```bash
+cp .env.example .env.local
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open <http://localhost:3000>.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Script          | What it does                 |
+| --------------- | ---------------------------- |
+| `npm run dev`   | Start the dev server         |
+| `npm run build` | Production build             |
+| `npm run start` | Serve the production build   |
+| `npm run lint`  | ESLint                       |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project layout
 
-## Learn More
+```
+app/          Routes, layouts and metadata files (robots, sitemap, manifest)
+components/   ui/ (primitives), layout/ (header, footer), sections/ (page blocks)
+content/      Everything that changes year to year: event, speakers, schedule, team, FAQs
+lib/          Small helpers
+public/       Static assets (brand/, images/)
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Updating content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All event details live in `content/`. Edit the data there. Components should
+never hold copy, dates or links. Anything still unknown is marked `TODO(2026)`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Environment variables
 
-## Deploy on Vercel
+| Name                   | Purpose                                                    |
+| ---------------------- | ---------------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL for metadata, sitemap, robots, JSON-LD |
+| `GOOGLE_SITE_VERIFICATION` | Optional Search Console verification token                |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## SEO
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Metadata, `robots.txt`, `sitemap.xml`, the web manifest, generated OG/Twitter images and
+JSON-LD (Organization, WebSite, Event) are all driven by `content/`. Only the production
+deployment is indexable. Vercel preview deployments and the dev server emit `noindex` and `Disallow: /`.
+Helpers live in `lib/seo.ts` and `lib/structured-data.ts`.
+
+## Registration
+
+RSVP is handled on the GDG Bevy platform. The link is defined once in
+`content/event.ts` and used by every call-to-action.

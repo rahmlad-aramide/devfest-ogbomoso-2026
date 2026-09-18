@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * DevFest Ogbomoso 2026 design tokens.
+ * Light-first, blue-led. Change a value here and it propagates to every utility.
+ * Contrast notes: white on `primary` passes AA; `google-blue` is decorative only;
+ * use `green-text` (not `google-green`) when green is used for text on light.
+ */
+@theme {
+  /* Surfaces */
+  --color-canvas: #f5f8ff;
+  --color-surface: #ffffff;
+  --color-surface-2: #eaf1ff;
+  --color-line: #d8e3f8;
+
+  /* Text */
+  --color-ink: #0b1b3a;
+  --color-muted: #4b5b7c;
+
+  /* Brand blue */
+  --color-primary: #1a73e8;
+  --color-primary-hover: #1557b8;
+  --color-primary-soft: #dbe8fd;
+  --color-google-blue: #4285f4;
+  --color-navy: #0b1f4d;
+  --color-navy-deep: #07142f;
+
+  /* Accents */
+  --color-google-green: #34a853;
+  --color-green-text: #188038;
+  --color-google-yellow: #fbbc04;
+  --color-google-red: #ea4335;
+  --color-cream: #ffe7a5;
+
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-card: 1.5rem;
+  --shadow-float: 0 12px 32px -8px rgb(11 31 77 / 0.18);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+.menu-in {
+  animation: menu-in 160ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-in {
+    animation: none;
+  }
 }
