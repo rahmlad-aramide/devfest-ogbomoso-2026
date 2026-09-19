@@ -5,6 +5,9 @@ export type EventPhase = "upcoming" | "live" | "ended";
 const startMs = Date.parse(event.start);
 const endMs = Date.parse(event.end);
 
+/** Instants (ms) at which the phase changes. */
+export const phaseBoundaries = [startMs, endMs];
+
 /** Derived purely from the ISO instants in content/event.ts. */
 export function getEventPhase(now: number = Date.now()): EventPhase {
   if (now < startMs) return "upcoming";

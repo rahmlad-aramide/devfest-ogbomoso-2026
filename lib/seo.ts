@@ -27,6 +27,17 @@ export function fullTitle(title?: string) {
   return title ? titleTemplate.replace("%s", title) : defaultTitle;
 }
 
+/**
+ * The generated social card (app/opengraph-image.tsx). Page-level `openGraph` / `twitter` replace the
+ * layout's, which drops the auto-attached image, so pages must list it explicitly.
+ */
+export const socialImage = {
+  url: "/opengraph-image",
+  width: 1200,
+  height: 630,
+  alt: `${event.fullName}: ${event.headline}`,
+};
+
 /** Open Graph defaults. Page-level `openGraph` replaces (not merges) the layout's, so repeat these. */
 export const baseOpenGraph = {
   type: "website",
@@ -56,8 +67,8 @@ export function pageMetadata({
     ...(title ? { title } : {}),
     description,
     alternates: { canonical: path },
-    openGraph: { ...baseOpenGraph, title: shownTitle, description, url: path },
-    twitter: { card: "summary_large_image", title: shownTitle, description },
+    openGraph: { ...baseOpenGraph, title: shownTitle, description, url: path, images: [socialImage] },
+    twitter: { card: "summary_large_image", title: shownTitle, description, images: [socialImage.url] },
     ...(noindex ? { robots: { index: false, follow: true } } : {}),
   };
 }

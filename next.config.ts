@@ -1,7 +1,28 @@
 import type { NextConfig } from "next";
 import { event } from "./content/event";
 
+/**
+ * Content-Security-Policy. Everything is self-hosted (fonts are inlined by next/font at build time),
+ * so nothing external is allowed. `'unsafe-inline'` is needed for Next's inline bootstrap scripts and
+ * styles on statically rendered pages. Skipped in development, where React needs `eval`.
+ */
+const csp = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline'",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob:",
+  "font-src 'self'",
+  "media-src 'self'",
+  "connect-src 'self'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'none'",
+  "upgrade-insecure-requests",
+].join("; ");
+
 const securityHeaders = [
+  ...(process.env.NODE_ENV === "production" ? [{ key: "Content-Security-Policy", value: csp }] : []),
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "DENY" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },

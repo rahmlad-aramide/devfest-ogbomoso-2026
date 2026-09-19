@@ -20,7 +20,7 @@ export function SpeakerCard({ speaker, sessions = [] }: { speaker: Speaker; sess
         </p>
         {sessions.map((s) => (
           <p key={s.id} className="mt-2 text-sm text-ink/80">
-            <span className="font-semibold text-primary">{formatSessionTime(s.start)}</span> {s.title}
+            <span className="font-semibold text-link">{formatSessionTime(s.start)}</span> {s.title}
           </p>
         ))}
         {speaker.bio ? <p className="mt-2 text-sm leading-relaxed text-muted">{speaker.bio}</p> : null}

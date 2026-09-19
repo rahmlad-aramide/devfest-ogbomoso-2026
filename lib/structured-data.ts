@@ -33,8 +33,9 @@ export function websiteJsonLd() {
 }
 
 /**
- * schema.org/Event for the home page. Rich results need a Place with an address, so the
- * place is always present; its `name` is only set once the venue is announced.
+ * schema.org/Event for the home page. Rich results need a Place with an address, and a name is
+ * expected too, so until the venue is announced the place is named after the city. It switches to
+ * the real venue name automatically once `event.venue.name` is set.
  * No `offers` block: ticketing is external (Bevy) and pricing is not published here.
  */
 export function eventJsonLd() {
@@ -53,7 +54,7 @@ export function eventJsonLd() {
     image: [absoluteUrl("/opengraph-image")],
     location: {
       "@type": "Place",
-      ...(isVenueAnnounced() ? { name: event.venue.name } : {}),
+      name: isVenueAnnounced() ? event.venue.name : `${event.venue.city}, ${event.venue.state}`,
       address: {
         "@type": "PostalAddress",
         ...(event.venue.address ? { streetAddress: event.venue.address } : {}),

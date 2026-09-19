@@ -24,7 +24,7 @@ export function PersonAvatar({
 }) {
   return (
     <span
-      className={cn("relative inline-grid shrink-0 place-items-center overflow-hidden rounded-full bg-primary-soft font-display font-bold text-primary", className)}
+      className={cn("relative inline-grid shrink-0 place-items-center overflow-hidden rounded-full bg-primary-soft font-display font-bold text-link", className)}
       style={{ width: size, height: size, fontSize: size * 0.36 }}
     >
       {photo ? (

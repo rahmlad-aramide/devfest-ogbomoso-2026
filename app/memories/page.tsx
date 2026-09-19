@@ -47,7 +47,7 @@ export default function MemoriesPage() {
               href={throwback.albumUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-primary underline underline-offset-4"
+              className="font-semibold text-link underline underline-offset-4"
             >
               See the full album
               <span className="sr-only"> (opens in a new tab)</span>

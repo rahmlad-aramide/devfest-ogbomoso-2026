@@ -21,6 +21,8 @@
   --color-primary: #1a73e8;
   --color-primary-hover: #1557b8;
   --color-primary-soft: #dbe8fd;
+  /* Deeper blue for small text and links on light backgrounds (AA on canvas and primary-soft). */
+  --color-link: #1557b8;
   --color-google-blue: #4285f4;
   --color-navy: #0b1f4d;
   --color-navy-deep: #07142f;
@@ -30,6 +32,7 @@
   --color-green-text: #188038;
   --color-google-yellow: #fbbc04;
   --color-google-red: #ea4335;
+  --color-google-red-text: #c5221f;
   --color-cream: #ffe7a5;
 
   --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;

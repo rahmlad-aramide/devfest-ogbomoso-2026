@@ -39,12 +39,12 @@ export const nav: NavItem[] = [
   { label: "Speakers", href: "/#speakers" },
   { label: "Schedule", href: "/#schedule" },
   { label: "Team", href: "/#team" },
-  { label: "FAQ", href: "/#faqs" },
+  { label: "Generate DP", href: "/dp" },
 ];
 
 /** Extra footer links for pages that aren't part of the main navigation. */
 export const secondaryNav: NavItem[] = [
-  { label: "Create your DP", href: "/dp" },
+  { label: "FAQ", href: "/#faqs" },
   { label: "Memories", href: "/memories" },
   { label: "Code of conduct", href: "/code-of-conduct" },
 ];

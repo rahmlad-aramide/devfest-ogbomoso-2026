@@ -23,7 +23,7 @@ export function Timeline({ sessions }: { sessions: Session[] }) {
         const quiet = s.kind === "break" || s.kind === "social";
         return (
           <li key={s.id} className="grid gap-1 py-6 sm:grid-cols-[11rem_1fr] sm:gap-8">
-            <p className="font-semibold text-primary tabular-nums">
+            <p className="font-semibold text-link tabular-nums">
               {formatSessionTime(s.start)} – {formatSessionTime(s.end)}
             </p>
             <div>

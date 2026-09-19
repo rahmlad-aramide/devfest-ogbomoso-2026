@@ -21,7 +21,7 @@ export function Schedule() {
               <Timeline sessions={schedule.slice(0, PREVIEW_COUNT)} />
             </div>
             {schedule.length > PREVIEW_COUNT ? (
-              <Link href="/schedule" className="mt-8 inline-block font-semibold text-primary underline underline-offset-4">
+              <Link href="/schedule" className="mt-8 inline-block font-semibold text-link underline underline-offset-4">
                 See the full schedule
               </Link>
             ) : null}

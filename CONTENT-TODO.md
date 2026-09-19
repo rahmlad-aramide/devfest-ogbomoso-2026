@@ -6,8 +6,8 @@ Everything below is a `TODO(2026)` in the codebase. Edit the file named, and the
 
 | Item | File | Notes |
 | --- | --- | --- |
-| **2026 DP frame artwork** | `public/images/` (Phase 6) | The repo only has 2025 frames. The DP generator will use a visible placeholder until this arrives. |
-| **Venue** | `content/event.ts` → `venue.name`, `address`, `mapUrl` | While `name` is `"TBA"` the UI shows "Venue to be announced" and JSON-LD omits the place name. |
+| **2026 DP frame artwork** | `content/dp.ts` → `frame` | The generator runs on a built-in placeholder frame (drawn in code from the event data). To use the official artwork, export a transparent 1080×1080 PNG with a hole for the photo, save it in `public/images/`, and set `frame` (the `src`, the photo `window`, and an optional `name` position). The instructions are in the file. |
+| **Venue** | `content/event.ts` → `venue.name`, `address`, `mapUrl` | While `name` is `"TBA"` the UI shows "Venue to be announced" and the structured data names the place after the city ("Ogbomoso, Oyo State"). Both switch to the real name automatically. |
 | **Speakers** | `content/speakers.ts`, then `event.sections.speakers = "published"` | Photos → `public/images/speakers-2026/` (640×800 webp). |
 | **Schedule** | `content/schedule.ts`, then `event.sections.schedule = "published"` | Single day, times as `"HH:mm"`. |
 
@@ -29,9 +29,13 @@ Everything below is a `TODO(2026)` in the codebase. Edit the file named, and the
 
 `/speakers` and `/schedule` are `noindex` and left out of the sitemap while their section is `"coming-soon"`. Setting `event.sections.speakers` / `.schedule` to `"published"` in `content/event.ts` makes them indexable and adds them to `sitemap.xml` automatically.
 
-## Known follow-ups
+## After the event (Oct 17, 2026)
 
-- After the event (Oct 17, 2026) the hero switches itself to a thank-you state, but the header RSVP button and the closing CTA still say "RSVP now". Change or hide them once the event has passed (Phase 7).
+The site switches itself once the end time in `content/event.ts` passes: the hero shows a thank-you message, every RSVP button becomes "See the memories", and the closing banner says thanks. The static copy does not change on its own, so refresh these by hand: the hero tagline (`event.headline`), the About text and the FAQ answers in `content/`.
+
+## Hero background video
+
+`app/page.tsx` renders `<Hero videoBackground />`, which plays `public/video/devfest-2023-recap.mp4` (footage from the **2023** edition, with 2023 banners visible). It only plays after the page has loaded and is skipped for visitors who choose reduced motion, have Data Saver on, or are on a 2G/3G-speed connection, who see the still photo (`event.heroImage`) instead. Swap in newer footage or use `<Hero />` for the photo only.
 
 ## Nice to have
 

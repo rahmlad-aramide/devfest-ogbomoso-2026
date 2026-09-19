@@ -27,7 +27,7 @@ export function Speakers() {
               ))}
             </ul>
             {speakers.length > PREVIEW_COUNT ? (
-              <Link href="/speakers" className="mt-10 inline-block font-semibold text-primary underline underline-offset-4">
+              <Link href="/speakers" className="mt-10 inline-block font-semibold text-link underline underline-offset-4">
                 See all speakers
               </Link>
             ) : null}
@@ -53,7 +53,7 @@ export function Speakers() {
             <div className="mt-16">
               <div className="flex flex-wrap items-baseline justify-between gap-4">
                 <h3 className="font-display text-2xl font-extrabold text-navy">On stage in {event.lastEdition.year}</h3>
-                <Link href="/speakers" className="font-semibold text-primary underline underline-offset-4">
+                <Link href="/speakers" className="font-semibold text-link underline underline-offset-4">
                   See the full {event.lastEdition.year} lineup
                 </Link>
               </div>

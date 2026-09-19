@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { Glyph, type GlyphName } from "@/components/ui/glyph";
 
 interface Piece {
@@ -29,19 +29,21 @@ export function HeroArt() {
   const reduce = useReducedMotion();
 
   return (
-    <div aria-hidden="true" className="relative mx-auto aspect-square w-full max-w-xs lg:max-w-md">
-      {pieces.map((p, i) => (
-        <motion.div
-          key={p.name}
-          className="absolute"
-          style={{ left: `${p.left}%`, top: `${p.top}%`, width: `${p.width}%` }}
-          initial={reduce ? false : { opacity: 0, scale: 0.4, y: 30, rotate: p.rotate - 28 }}
-          animate={{ opacity: 1, scale: 1, y: 0, rotate: p.rotate }}
-          transition={{ type: "spring", stiffness: 170, damping: 13, delay: 0.1 + i * 0.09 }}
-        >
-          <Glyph name={p.name} className={`block h-auto w-full ${p.color}`} />
-        </motion.div>
-      ))}
-    </div>
+    <LazyMotion features={domAnimation} strict>
+      <div aria-hidden="true" className="relative mx-auto aspect-square w-full max-w-xs lg:max-w-md">
+        {pieces.map((p, i) => (
+          <m.div
+            key={p.name}
+            className="absolute"
+            style={{ left: `${p.left}%`, top: `${p.top}%`, width: `${p.width}%` }}
+            initial={reduce ? false : { opacity: 0, scale: 0.4, y: 30, rotate: p.rotate - 28 }}
+            animate={{ opacity: 1, scale: 1, y: 0, rotate: p.rotate }}
+            transition={{ type: "spring", stiffness: 170, damping: 13, delay: 0.1 + i * 0.09 }}
+          >
+            <Glyph name={p.name} className={`block h-auto w-full ${p.color}`} />
+          </m.div>
+        ))}
+      </div>
+    </LazyMotion>
   );
 }

@@ -1,4 +1,4 @@
-import { dp, type DpFrame } from "@/content/dp";
+import { dp, dpThemes, type DpFrame, type DpTheme } from "@/content/dp";
 import { event } from "@/content/event";
 import { formatEventDate } from "@/lib/format";
 import type { GlyphName } from "@/components/ui/glyph";
@@ -22,11 +22,54 @@ export interface DpInput {
   fonts: DpFonts;
   /** Loaded artwork for `dp.frame`, when configured. */
   frameImage: HTMLImageElement | null;
+  theme: DpTheme;
 }
 
-const NAVY = "#0b1f4d";
-const YELLOW = "#fbbc04";
-const COLORS = { blue: "#4285f4", red: "#ea4335", yellow: YELLOW, green: "#34a853" };
+// ---- Colour helpers (all colours are #rrggbb) ----
+
+const rgb = (hex: string): [number, number, number] => {
+  const n = parseInt(hex.slice(1), 16);
+  return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+};
+
+const toHex = (c: number[]) => `#${c.map((v) => Math.round(v).toString(16).padStart(2, "0")).join("")}`;
+
+/** `t` of the way from colour `a` to colour `b`. */
+export const mix = (a: string, b: string, t: number) => {
+  const [x, y] = [rgb(a), rgb(b)];
+  return toHex(x.map((v, i) => v + (y[i]! - v) * t));
+};
+
+const luminance = (hex: string) => {
+  const [r, g, b] = rgb(hex).map((v) => {
+    const c = v / 255;
+    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+  }) as [number, number, number];
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+};
+
+/** WCAG contrast ratio, 1 to 21. */
+export function contrast(a: string, b: string) {
+  const [hi, lo] = [luminance(a), luminance(b)].sort((x, y) => y - x) as [number, number];
+  return (hi + 0.05) / (lo + 0.05);
+}
+
+/**
+ * Build a theme from a custom background and foreground. Keeps the base theme's accent and
+ * shape colours where they stay visible on the new background, and falls back to the
+ * foreground colour where they wouldn't.
+ */
+export function customTheme(bg: string, fg: string, base: DpTheme = dpThemes[0]!): DpTheme {
+  const visible = (c: string, min: number) => (contrast(c, bg) >= min ? c : fg);
+  return {
+    id: "custom",
+    label: "Custom",
+    bg: [bg, mix(bg, luminance(bg) > 0.5 ? "#000000" : "#ffffff", 0.14)],
+    text: fg,
+    accent: visible(base.accent, 3),
+    glyphs: base.glyphs.map((g) => visible(g, 2)) as DpTheme["glyphs"],
+  };
+}
 
 interface Win {
   x: number;
@@ -99,75 +142,89 @@ function drawPhoto(ctx: CanvasRenderingContext2D, input: DpInput, win: Win) {
     ctx.imageSmoothingQuality = "high";
     ctx.drawImage(input.photo, cx - w / 2, cy - h / 2, w, h);
   } else {
-    ctx.fillStyle = "rgba(255,255,255,0.10)";
+    const { text } = input.theme;
+    ctx.globalAlpha = 0.12;
+    ctx.fillStyle = text;
     ctx.fillRect(win.x, win.y, win.size, win.size);
-    drawGlyph(ctx, "plus", win.x + win.size / 2 - 40, win.y + win.size / 2 - 70, 80, "rgba(255,255,255,0.55)");
-    ctx.fillStyle = "rgba(255,255,255,0.7)";
+    ctx.globalAlpha = 0.6;
+    drawGlyph(ctx, "plus", win.x + win.size / 2 - 40, win.y + win.size / 2 - 70, 80, text);
+    ctx.globalAlpha = 0.75;
+    ctx.fillStyle = text;
     ctx.font = `500 34px ${input.fonts.sans}`;
     ctx.textAlign = "center";
     ctx.textBaseline = "alphabetic";
     ctx.fillText("Add your photo", win.x + win.size / 2, win.y + win.size / 2 + 60);
+    ctx.globalAlpha = 1;
   }
   ctx.restore();
+}
+
+function fillBackground(ctx: CanvasRenderingContext2D, theme: DpTheme) {
+  const S = dp.size;
+  const bg = ctx.createLinearGradient(0, 0, S, S);
+  bg.addColorStop(0, theme.bg[0]);
+  bg.addColorStop(1, theme.bg[1]);
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, S, S);
 }
 
 /** Built-in placeholder frame, used until official artwork is set in content/dp.ts. */
 function drawPlaceholderFrame(ctx: CanvasRenderingContext2D, input: DpInput, win: Win) {
   const S = dp.size;
-  const bg = ctx.createLinearGradient(0, 0, S, S);
-  bg.addColorStop(0, NAVY);
-  bg.addColorStop(1, "#153b93");
-  ctx.fillStyle = bg;
-  ctx.fillRect(0, 0, S, S);
+  const { theme } = input;
+  const [brace, chevron, slash, green] = theme.glyphs;
+  fillBackground(ctx, theme);
 
-  drawGlyph(ctx, "brace-left", 40, 40, 150, COLORS.yellow, -8);
-  drawGlyph(ctx, "chevron-left", 860, 30, 120, COLORS.blue, 0);
-  drawGlyph(ctx, "plus", 930, 250, 80, COLORS.blue, 12);
-  drawGlyph(ctx, "slash", 30, 330, 110, COLORS.red, 10);
-  drawGlyph(ctx, "chevron-right", 900, 560, 110, COLORS.green, 0);
-  drawGlyph(ctx, "semicolon", 60, 590, 100, COLORS.green, -8);
+  drawGlyph(ctx, "brace-left", 40, 40, 150, brace, -8);
+  drawGlyph(ctx, "chevron-left", 860, 30, 120, chevron, 0);
+  drawGlyph(ctx, "plus", 930, 250, 80, chevron, 12);
+  drawGlyph(ctx, "slash", 30, 330, 110, slash, 10);
+  drawGlyph(ctx, "chevron-right", 900, 560, 110, green, 0);
+  drawGlyph(ctx, "semicolon", 60, 590, 100, green, -8);
 
   // Photo, then the ring around it.
   drawPhoto(ctx, input, win);
   ctx.beginPath();
   ctx.arc(win.x + win.size / 2, win.y + win.size / 2, win.size / 2 + 8, 0, Math.PI * 2);
   ctx.lineWidth = 16;
-  ctx.strokeStyle = YELLOW;
+  ctx.strokeStyle = theme.accent;
   ctx.stroke();
 
   // Text block, centred.
   ctx.textAlign = "center";
   ctx.textBaseline = "alphabetic";
   const name = input.name.trim();
-  ctx.fillStyle = "rgba(255,255,255,0.8)";
+  ctx.fillStyle = theme.text;
+  ctx.globalAlpha = 0.8;
   ctx.font = `500 34px ${input.fonts.sans}`;
   ctx.fillText("I'm attending", S / 2, 838);
 
-  ctx.fillStyle = "#ffffff";
+  ctx.globalAlpha = 1;
   fit(ctx, event.fullName, input.fonts.display, 800, 76, 940);
   ctx.fillText(event.fullName, S / 2, 918);
 
   if (name) {
-    ctx.fillStyle = YELLOW;
+    ctx.fillStyle = theme.accent;
     fit(ctx, name, input.fonts.display, 800, 60, 900);
     ctx.fillText(name, S / 2, 990);
   }
-  ctx.fillStyle = "rgba(255,255,255,0.75)";
+  ctx.fillStyle = theme.text;
+  ctx.globalAlpha = 0.75;
   ctx.font = `500 30px ${input.fonts.sans}`;
   ctx.fillText(`${formatEventDate()} · ${event.venue.city}`, S / 2, name ? 1040 : 990);
+  ctx.globalAlpha = 1;
 }
 
 /** Official artwork mode: photo underneath, transparent frame PNG on top, optional name. */
 function drawArtworkFrame(ctx: CanvasRenderingContext2D, input: DpInput, frame: DpFrame, image: HTMLImageElement) {
   const S = dp.size;
-  ctx.fillStyle = NAVY;
-  ctx.fillRect(0, 0, S, S);
+  fillBackground(ctx, input.theme);
   drawPhoto(ctx, input, frame.window);
   ctx.drawImage(image, 0, 0, S, S);
 
   const name = input.name.trim();
   if (name && frame.name) {
-    ctx.fillStyle = frame.name.color;
+    ctx.fillStyle = frame.name.color ?? input.theme.text;
     ctx.textAlign = frame.name.align;
     ctx.textBaseline = "alphabetic";
     fit(ctx, name, input.fonts.display, 800, 60, frame.name.maxWidth);

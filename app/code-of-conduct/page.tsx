@@ -36,7 +36,7 @@ export default function CodeOfConductPage() {
         {x ? (
           <p className="mt-12 border-t border-line pt-6 text-muted">
             Questions about this policy? Reach {site.organization} on{" "}
-            <a href={x.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline underline-offset-4">
+            <a href={x.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-link underline underline-offset-4">
               X ({site.twitterHandle})<span className="sr-only"> (opens in a new tab)</span>
             </a>
             .

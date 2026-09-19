@@ -32,6 +32,11 @@ lib/          Small helpers
 public/       Static assets (brand/, images/)
 ```
 
+## Launching
+
+See [`LAUNCH-CHECKLIST.md`](./LAUNCH-CHECKLIST.md) for environment variables, DNS and post-deploy checks, and
+[`CONTENT-TODO.md`](./CONTENT-TODO.md) for the content that still needs filling in.
+
 ## Updating content
 
 All event details live in `content/`. Edit the data there. Components should
@@ -43,6 +48,20 @@ never hold copy, dates or links. Anything still unknown is marked `TODO(2026)`.
 | ---------------------- | ---------------------------------------------------------- |
 | `NEXT_PUBLIC_SITE_URL` | Canonical site URL for metadata, sitemap, robots, JSON-LD |
 | `GOOGLE_SITE_VERIFICATION` | Optional Search Console verification token                |
+
+## DP generator
+
+`/dp` builds a shareable display picture in the browser with the Canvas API. Photos never
+leave the device. It runs on a built-in placeholder frame until official artwork is set in
+`content/dp.ts`.
+
+## Accessibility and security
+
+Small text and links use the `link` colour token so they meet WCAG AA on the light backgrounds
+(checked with axe-core on every page). Motion respects `prefers-reduced-motion`, and the hero
+video is skipped for reduced-motion and Data Saver visitors. Production responses send a
+Content-Security-Policy (see `next.config.ts`); everything is self-hosted, so no external
+origins are allowed.
 
 ## SEO
 

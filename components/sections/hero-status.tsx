@@ -1,6 +1,7 @@
 "use client";
 
 import { ButtonLink } from "@/components/ui/button";
+import { useEventPhase } from "@/components/ui/event-phase";
 import { RsvpButton } from "@/components/ui/rsvp-button";
 import { event } from "@/content/event";
 import { getEventPhase, getTimeLeft } from "@/lib/event-status";
@@ -10,13 +11,13 @@ import { useNow } from "@/lib/use-now";
 const units = ["days", "hours", "minutes", "seconds"] as const;
 
 /**
- * Both components read the clock through `useNow`, which is `null` until the client has mounted.
- * Until then they render the "upcoming" state with placeholder digits, so server and client markup match.
+ * `HeroCountdown` reads the ticking clock through `useNow`, which is `null` until the client has mounted.
+ * Until then it renders the "upcoming" state with placeholder digits, so server and client markup match.
+ * `HeroActions` only needs the phase, which changes at most twice, so it does not re-render every second.
  */
 
 export function HeroActions() {
-  const now = useNow();
-  const ended = now !== null && getEventPhase(now) === "ended";
+  const ended = useEventPhase() === "ended";
 
   return (
     <div className="mt-8 flex flex-wrap gap-3">

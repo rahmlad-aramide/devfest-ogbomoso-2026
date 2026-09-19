@@ -23,7 +23,7 @@ export function Faq() {
                 href={x.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-primary underline underline-offset-4"
+                className="font-semibold text-link underline underline-offset-4"
               >
                 X ({site.twitterHandle})
                 <span className="sr-only"> (opens in a new tab)</span>

@@ -30,7 +30,7 @@ export function Team() {
                   <p className="font-display text-lg leading-tight font-bold text-navy">{m.name}</p>
                   <p className="mt-0.5 text-sm text-muted">{m.role}</p>
                   {m.leadOf?.length ? (
-                    <p className="text-sm font-semibold text-primary">Leads {m.leadOf.join(" and ")}</p>
+                    <p className="text-sm font-semibold text-link">Leads {m.leadOf.join(" and ")}</p>
                   ) : null}
                 </figcaption>
               </figure>

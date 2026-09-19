@@ -1,10 +1,12 @@
 "use client";
 
 import { Download, ImagePlus, RotateCcw, Share2 } from "lucide-react";
-import { useCallback, useEffect, useId, useRef, useState, useSyncExternalStore } from "react";
-import { dp } from "@/content/dp";
+import { useCallback, useEffect, useId, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { dp, dpThemes } from "@/content/dp";
 import { site } from "@/content/site";
 import {
+  contrast,
+  customTheme,
   drawDp,
   getWindow,
   loadFrameImage,
@@ -24,7 +26,7 @@ export function DpGenerator() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const fileInput = useRef<HTMLInputElement>(null);
   const drag = useRef<{ x: number; y: number } | null>(null);
-  const ids = { name: useId(), zoom: useId(), x: useId(), y: useId() };
+  const ids = { name: useId(), zoom: useId(), x: useId(), y: useId(), bg: useId(), fg: useId() };
 
   const [photo, setPhoto] = useState<Drawable | null>(null);
   const [zoom, setZoom] = useState(1);
@@ -33,6 +35,8 @@ export function DpGenerator() {
   const [fonts, setFonts] = useState<DpFonts | null>(null);
   const [frameImage, setFrameImage] = useState<HTMLImageElement | null>(null);
   const [message, setMessage] = useState("");
+  const [themeId, setThemeId] = useState<string>(dpThemes[0]!.id);
+  const [custom, setCustom] = useState({ bg: dpThemes[0]!.bg[0], fg: dpThemes[0]!.text });
   const canShare = useSyncExternalStore(noopSubscribe, canShareFiles, () => false);
 
   // Load the site fonts (for canvas text) and any official frame artwork once.
@@ -57,11 +61,23 @@ export function DpGenerator() {
     };
   }, []);
 
+  const theme = useMemo(
+    () => (themeId === "custom" ? customTheme(custom.bg, custom.fg) : (dpThemes.find((t) => t.id === themeId) ?? dpThemes[0]!)),
+    [themeId, custom],
+  );
+  const lowContrast = contrast(theme.text, theme.bg[0]) < 3;
+
   useEffect(() => {
     const ctx = canvasRef.current?.getContext("2d");
     if (!ctx || !fonts) return;
-    drawDp(ctx, { photo, zoom, nx: pos.nx, ny: pos.ny, name, fonts, frameImage });
-  }, [photo, zoom, pos, name, fonts, frameImage]);
+    drawDp(ctx, { photo, zoom, nx: pos.nx, ny: pos.ny, name, fonts, frameImage, theme });
+  }, [photo, zoom, pos, name, fonts, frameImage, theme]);
+
+  /** Switch to a custom theme, seeding whichever colour wasn't touched from the current theme. */
+  function updateCustom(patch: Partial<typeof custom>) {
+    setCustom({ bg: theme.bg[0], fg: theme.text, ...patch });
+    setThemeId("custom");
+  }
 
   const win = getWindow(dp.frame);
   const travel = photo ? photoMetrics(photo, win, zoom) : null;
@@ -167,7 +183,7 @@ export function DpGenerator() {
           e.preventDefault();
           void addFile(e.dataTransfer.files[0]);
         }}
-        className={`mx-auto w-full max-w-xl overflow-hidden rounded-3xl bg-navy shadow-float ${photo ? "cursor-grab active:cursor-grabbing" : ""}`}
+        className={`mx-auto w-full max-w-xl self-start overflow-hidden rounded-3xl bg-navy shadow-float ${photo ? "cursor-grab active:cursor-grabbing" : ""}`}
       >
         <canvas
           ref={canvasRef}
@@ -219,6 +235,82 @@ export function DpGenerator() {
             className="mt-2 h-12 w-full rounded-xl border border-line bg-surface px-4 text-ink placeholder:text-muted/70"
           />
         </div>
+
+        <fieldset>
+          <legend className={labelClass}>Colours</legend>
+          <div className="mt-3 flex flex-wrap gap-3">
+            {dpThemes.map((t) => (
+              <label key={t.id} className="cursor-pointer text-center">
+                <input
+                  type="radio"
+                  name="dp-theme"
+                  className="peer sr-only"
+                  checked={themeId === t.id}
+                  onChange={() => setThemeId(t.id)}
+                />
+                <span
+                  className="grid size-14 place-items-center rounded-xl border-[3px] border-transparent font-display font-bold ring-1 ring-line peer-checked:border-primary peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary"
+                  style={{ background: `linear-gradient(135deg, ${t.bg[0]}, ${t.bg[1]})`, color: t.accent }}
+                >
+                  Aa
+                </span>
+                <span className="mt-1 block text-xs text-muted">{t.label}</span>
+              </label>
+            ))}
+            <label className="cursor-pointer text-center">
+              <input
+                type="radio"
+                name="dp-theme"
+                className="peer sr-only"
+                checked={themeId === "custom"}
+                onChange={() => updateCustom({})}
+              />
+              <span
+                className="grid size-14 place-items-center rounded-xl border-[3px] border-transparent font-display font-bold ring-1 ring-line peer-checked:border-primary peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary"
+                style={{
+                  background:
+                    themeId === "custom"
+                      ? `linear-gradient(135deg, ${theme.bg[0]}, ${theme.bg[1]})`
+                      : "conic-gradient(#ea4335, #fbbc04, #34a853, #4285f4, #ea4335)",
+                  color: themeId === "custom" ? theme.text : "#ffffff",
+                }}
+              >
+                Aa
+              </span>
+              <span className="mt-1 block text-xs text-muted">Custom</span>
+            </label>
+          </div>
+
+          <div className="mt-5 grid grid-cols-2 gap-4">
+            <div>
+              <label htmlFor={ids.bg} className={labelClass}>
+                Background
+              </label>
+              <input
+                id={ids.bg}
+                type="color"
+                value={theme.bg[0]}
+                onChange={(e) => updateCustom({ bg: e.target.value })}
+                className="mt-2 h-11 w-full cursor-pointer rounded-xl border border-line bg-surface p-1"
+              />
+            </div>
+            <div>
+              <label htmlFor={ids.fg} className={labelClass}>
+                Foreground
+              </label>
+              <input
+                id={ids.fg}
+                type="color"
+                value={theme.text}
+                onChange={(e) => updateCustom({ fg: e.target.value })}
+                className="mt-2 h-11 w-full cursor-pointer rounded-xl border border-line bg-surface p-1"
+              />
+            </div>
+          </div>
+          <p role="status" className="mt-2 min-h-5 text-sm text-google-red-text">
+            {lowContrast ? "These colours are hard to read together. Try a lighter or darker foreground." : ""}
+          </p>
+        </fieldset>
 
         <fieldset disabled={!photo} className="space-y-5 disabled:opacity-50">
           <legend className="sr-only">Adjust your photo</legend>
@@ -275,7 +367,7 @@ export function DpGenerator() {
               setZoom(1);
               setPos({ nx: 0, ny: 0 });
             }}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary underline underline-offset-4"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-link underline underline-offset-4"
           >
             <RotateCcw className="size-4" aria-hidden="true" />
             Reset position

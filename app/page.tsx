@@ -1,5 +1,6 @@
 import { About } from "@/components/sections/about";
 import { ClosingCta } from "@/components/sections/closing-cta";
+import { DpPromo } from "@/components/sections/dp-promo";
 import { Faq } from "@/components/sections/faq";
 import { Hero } from "@/components/sections/hero";
 import { Schedule } from "@/components/sections/schedule";
@@ -14,12 +15,14 @@ export default function Home() {
     <>
       <JsonLd data={eventJsonLd()} />
       <JsonLd data={faqJsonLd()} />
-      <Hero />
+      {/* <Hero /> */}
+      <Hero videoBackground />
       <About />
       <Speakers />
       <Schedule />
       <Throwback />
       <Team />
+      <DpPromo />
       <Faq />
       <ClosingCta />
     </>
