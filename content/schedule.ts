@@ -1,17 +1,230 @@
 import type { Session } from "./types";
 
 /**
- * DevFest 2026 is a single day (Saturday 17 October, 9:00 AM – 4:00 PM), so times are
- * plain local "HH:mm" strings. Keep sessions in chronological order.
- * Empty until the agenda is published.
+ * Tentative agenda for DevFest Ogbomoso 2026 — two days, in chronological order within each day.
+ * Day 1 (Workshops & Codelabs) runs three breakout blocks: sessions that share a start/end time
+ * are concurrent, each in its own room (see `room`), grouped by theme (see `track`).
+ * Day 2 (Main Conference) is single-track.
+ *
+ * Several slots are still unconfirmed (kind: "tbd") — this will be updated as facilitators and
+ * speakers are locked in.
  */
 export const schedule: Session[] = [
-  // {
-  //   id: "opening-keynote",
-  //   start: "09:30",
-  //   end: "10:15",
-  //   title: "Opening keynote",
-  //   kind: "keynote",
-  //   speakerIds: ["jane-doe"],
-  // },
+  // --- Day 1: Workshops & Codelabs ---
+  { id: "d1-registration", day: 1, start: "09:00", end: "09:30", title: "Registration", kind: "break" },
+  {
+    id: "d1-welcome",
+    day: 1,
+    start: "09:30",
+    end: "09:45",
+    title: "Welcome to DevFest Ogbomoso 2026, Ground Rules",
+    kind: "talk",
+    speakerNames: ["Glory Olaifa"],
+  },
+  { id: "d1-tbd-0945", day: 1, start: "09:45", end: "10:15", title: "To be announced", kind: "tbd" },
+  { id: "d1-tbd-1015", day: 1, start: "10:15", end: "10:35", title: "To be announced", kind: "tbd" },
+  { id: "d1-breakout-transition", day: 1, start: "10:35", end: "10:45", title: "Breakout room transition", kind: "break" },
+
+  // Track 1 — three parallel breakout sessions
+  {
+    id: "d1-track1-agent-skills",
+    day: 1,
+    start: "10:45",
+    end: "11:45",
+    title: "Your Next User Is an Agent: Shipping Skills With Your SDK",
+    kind: "workshop",
+    track: "AI",
+    room: "Track 1",
+    speakerIds: ["samuel-abada"],
+  },
+  {
+    id: "d1-track1-on-device-ai-flutter",
+    day: 1,
+    start: "10:45",
+    end: "11:45",
+    title: "On-Device AI with Flutter: Running Local Gemma Models & ML Kit Without Server Latency",
+    kind: "workshop",
+    track: "Engineering and Security",
+    room: "Track 1",
+    speakerIds: ["david-oluwabusayo"],
+  },
+  {
+    id: "d1-track1-auto-mode-vpc",
+    day: 1,
+    start: "10:45",
+    end: "11:45",
+    title: "Auto Mode VPC: Your Networking Safety Net in Google Cloud",
+    kind: "workshop",
+    track: "Cloud",
+    room: "Track 1",
+    speakerIds: ["mbaoma-mary"],
+  },
+
+  // Track 2 — three parallel breakout sessions
+  {
+    id: "d1-track2-context-engineering-adk",
+    day: 1,
+    start: "11:55",
+    end: "12:55",
+    title: "Context Engineering with Google ADK: Keeping Long-Running Agents on Track",
+    kind: "workshop",
+    track: "AI",
+    room: "Track 2",
+    speakerIds: ["dami-oshun"],
+  },
+  {
+    id: "d1-track2-hybrid-ai-web",
+    day: 1,
+    start: "11:55",
+    end: "12:55",
+    title: "Hybrid AI on the Web: Offloading Cloud Costs to the Browser",
+    kind: "workshop",
+    track: "Engineering and Security",
+    room: "Track 2",
+    speakerIds: ["auwal-ms"],
+  },
+  {
+    id: "d1-track2-antigravity-pipelines",
+    day: 1,
+    start: "11:55",
+    end: "12:55",
+    title: "Build Autonomous Developer Pipelines Using agents.md and skills.md in Antigravity",
+    kind: "workshop",
+    track: "Cloud",
+    room: "Track 2",
+    speakerIds: ["miracle-olabode"],
+  },
+
+  { id: "d1-lunch", day: 1, start: "13:00", end: "14:50", title: "Jumat / Lunch break", kind: "break" },
+
+  // Track 3 — three parallel breakout sessions
+  {
+    id: "d1-track3-antigravity-cli",
+    day: 1,
+    start: "14:50",
+    end: "15:50",
+    title: "10x Productivity with the Antigravity CLI",
+    kind: "workshop",
+    track: "AI",
+    room: "Track 3",
+    speakerIds: ["mustapha-adekunle"],
+  },
+  {
+    id: "d1-track3-flutter-telemetry",
+    day: 1,
+    start: "14:50",
+    end: "15:50",
+    title: "Beyond Crash Logs: Building Event-Driven Telemetry in Flutter Apps",
+    kind: "workshop",
+    track: "Engineering and Security",
+    room: "Track 3",
+    speakerIds: ["christopher-nwosu-madueke"],
+  },
+  {
+    id: "d1-track3-cloud-sql-webapp",
+    day: 1,
+    start: "14:50",
+    end: "15:50",
+    title: "Build Your First Database-Backed Web App with Google AI Studio and Cloud SQL",
+    kind: "workshop",
+    track: "Cloud",
+    room: "Track 3",
+    speakerIds: ["saheed-adewumi"],
+  },
+
+  // --- Day 2: Main Conference ---
+  {
+    id: "d2-registration",
+    day: 2,
+    start: "08:00",
+    end: "09:00",
+    title: "Registration and networking",
+    kind: "break",
+  },
+  {
+    id: "d2-welcome",
+    day: 2,
+    start: "09:10",
+    end: "09:40",
+    title: "Welcome to DevFest Ogbomoso 2026",
+    kind: "talk",
+    speakerNames: ["Miracle"],
+  },
+  {
+    id: "d2-fireside-chat",
+    day: 2,
+    start: "09:50",
+    end: "10:20",
+    title: "Fireside Chat: What It Actually Takes — Breaking Into Google and Bloomberg Internships as a Student in Ogbomoso",
+    kind: "panel",
+    speakerIds: ["kehinde-quyum"],
+  },
+  { id: "d2-tbd-1030", day: 2, start: "10:30", end: "11:10", title: "To be announced", kind: "tbd" },
+  {
+    id: "d2-keynote-1",
+    day: 2,
+    start: "11:20",
+    end: "11:45",
+    title: "Keynote 1",
+    kind: "keynote",
+    speakerNames: ["Sodiq Akinjobi"],
+  },
+  { id: "d2-tbd-1155", day: 2, start: "11:55", end: "12:20", title: "To be announced", kind: "tbd" },
+  {
+    id: "d2-problem-to-product",
+    day: 2,
+    start: "12:30",
+    end: "12:50",
+    title:
+      "From Problem to Product: How Product Thinking Turns African Classroom Problems Into AI-Simulation Solutions",
+    kind: "talk",
+    speakerIds: ["ibekwe-adaeze"],
+  },
+  {
+    id: "d2-ai-moving-fast",
+    day: 2,
+    start: "13:00",
+    end: "13:40",
+    title: "AI Is Moving Fast. Where Do You Fit In?",
+    kind: "talk",
+    speakerIds: ["okanlawon-jamiu"],
+  },
+  {
+    id: "d2-agentic-sre-gke",
+    day: 2,
+    start: "13:50",
+    end: "14:10",
+    title: "Agentic SRE: Operating GKE with an AI Agent",
+    kind: "talk",
+    speakerIds: ["mileke-kolawole"],
+  },
+  { id: "d2-sponsors-slot", day: 2, start: "14:20", end: "14:30", title: "Sponsors slot", kind: "sponsor" },
+  { id: "d2-photo-lunch", day: 2, start: "14:40", end: "15:20", title: "Photograph, lunch break", kind: "break" },
+  {
+    id: "d2-contributor-pipeline",
+    day: 2,
+    start: "15:30",
+    end: "15:50",
+    title: "Building the Contributor Pipeline: Turning Developer Communities into Open Source Contributors",
+    kind: "talk",
+    speakerIds: ["esiebo-oluwabamikemi"],
+  },
+  {
+    id: "d2-code-is-cheap",
+    day: 2,
+    start: "16:00",
+    end: "16:10",
+    title: "In the AI Era, Code Is Cheap. Reputation Isn't.",
+    kind: "talk",
+    speakerIds: ["olasupo-funke"],
+  },
+  { id: "d2-tbd-1620", day: 2, start: "16:20", end: "16:35", title: "To be announced", kind: "tbd" },
+  {
+    id: "d2-showcase",
+    day: 2,
+    start: "16:45",
+    end: "17:15",
+    title: "Product showcase, games and networking",
+    kind: "social",
+  },
 ];

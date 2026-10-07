@@ -4,13 +4,13 @@ import type { TeamMember, TeamName } from "./types";
  * TODO(2026): confirm this roster is current. It is carried over from the 2025 site.
  * Members without a `photo` render an initials avatar.
  */
-export const teamNames: TeamName[] = ["Organizers", "Media and Publicity", "Design", "Dev"];
+export const teamNames: TeamName[] = ["Organizers", "Media and Publicity", "Design", "Dev", "Programs", "Content"];
 
 export const team: TeamMember[] = [
   { name: "Miracle Olabode", role: "Lead Organizer", photo: "/images/team/miracle-olabode.webp", teams: ["Organizers"] },
   { name: "Boluwatife Adebisi", role: "Lead Organizer", photo: "/images/team/boluwatife-adebisi.webp", teams: ["Organizers"] },
   { name: "Esuola Daniel", role: "Co-Organizer", photo: "/images/team/esuola-daniel.webp", teams: ["Organizers", "Design"], leadOf: ["Design"] },
-  { name: "Glory Olaifa", role: "Co-Organizer", photo: "/images/team/glory-olaifa.webp", teams: ["Organizers"] },
+  { name: "Glory Olaifa", role: "Co-Organizer", photo: "/images/team/glory-olaifa.webp", teams: ["Organizers"], leadOf: ["Programs"] },
   { name: "Blessed-Agboola Jesujoba", role: "Co-Organizer", photo: "/images/team/blessed-agboola-jesujoba.webp", teams: ["Organizers", "Media and Publicity", "Dev"], leadOf: ["Media and Publicity"] },
   { name: "Abdrahman Oladimeji", role: "Co-Organizer", photo: "/images/team/abdrahman-oladimeji.webp", teams: ["Organizers", "Dev"], leadOf: ["Dev"] },
   { name: "Adewole Ridwan", role: "Member", photo: "/images/team/adewole-ridwan.webp", teams: ["Dev"] },
@@ -20,6 +20,6 @@ export const team: TeamMember[] = [
   { name: "Olurinto Boluwatife", role: "Member", photo: "/images/team/olurinto-boluwatife.webp", teams: ["Design"] },
   { name: "Eniola Adesina", role: "Member", photo: "/images/team/eniola-adesina.webp", teams: ["Media and Publicity"] },
   { name: "Peter Awoniyi", role: "Member", photo: "/images/team/peter-awoniyi.webp", teams: ["Media and Publicity"] },
-  { name: "Gbadero Hiqmah Fadeke", role: "Member", photo: "/images/team/gbadero-hiqmah-fadeke.webp", teams: ["Media and Publicity"] },
+  { name: "Gbadero Hiqmah Fadeke", role: "Member", photo: "/images/team/gbadero-hiqmah-fadeke.webp", teams: ["Content"], leadOf: ["Content"] },
   { name: "Babatunde Abdullah", role: "Member", teams: ["Media and Publicity"] },
 ];

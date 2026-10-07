@@ -1,10 +1,41 @@
 import type { SectionStatus } from "./types";
 
 /**
+ * Per-day dates and venues. DevFest Ogbomoso 2026 runs over two days at two different venues:
+ * day 1 is the workshop/codelab track, day 2 is the main conference. `event.start`/`event.end`
+ * below (and every date/time/venue helper in lib/format.ts) describe day 2 only — it's the day
+ * RSVPs, the homepage countdown and structured data count down to. Day 1's date and venue live
+ * here and surface on /schedule.
+ */
+const days = [
+  {
+    day: 1,
+    label: "Workshops & Codelabs",
+    start: "2026-10-16T09:00:00+01:00",
+    end: "2026-10-16T15:50:00+01:00",
+    venue: {
+      name: "SQI College of ICT",
+      address: "Opposite Yoaco Filling Station, Yoaco, Ogbomoso",
+    },
+  },
+  {
+    day: 2,
+    label: "Main Conference",
+    start: "2026-10-17T08:00:00+01:00",
+    end: "2026-10-17T17:15:00+01:00",
+    venue: {
+      name: "The Assembly",
+      address: "Beside LAUTECH, Ogbomoso - Ilorin Rd., Oyo State, Nigeria",
+    },
+  },
+] as const;
+
+/**
  * Single source of truth for DevFest Ogbomoso 2026.
  * Edit this file when details change. Components never hold dates, links or copy.
  *
- * Source: GDG Bevy event page (checked 2026-09-18).
+ * Source: GDG Bevy event page (checked 2026-09-18); day dates/venues from the 2026 speaker
+ * announcement graphics (checked 2026-10-07).
  */
 export const event = {
   name: "DevFest Ogbomoso",
@@ -29,21 +60,24 @@ export const event = {
 
   /**
    * Fixed instants with explicit offsets. Nigeria is GMT+1 year-round (no DST),
-   * so the offset is safe to hard-code. All countdown and status logic derives from these.
+   * so the offset is safe to hard-code. All countdown and status logic derives from these —
+   * and from here on they track day 2 (Main Conference), see `days` above.
    */
-  start: "2026-10-17T09:00:00+01:00",
-  end: "2026-10-17T16:00:00+01:00",
+  start: days[1].start,
+  end: days[1].end,
   timezone: "Africa/Lagos",
 
+  /** Day 1 and day 2 dates/venues. Mirrors `start`/`end`/`venue` below for day 2. */
+  days,
+
   venue: {
-    /** Set to the real venue name once announced. "TBA" switches the UI to its announcement-pending state. */
-    name: "TBA",
-    address: null as string | null,
+    name: days[1].venue.name,
+    address: days[1].venue.address as string | null,
     city: "Ogbomoso",
     state: "Oyo State",
     country: "NG",
     postalCode: "212102",
-    /** Google Maps link, once the venue is known. */
+    /** Google Maps link, once published. */
     mapUrl: null as string | null,
   },
 
@@ -86,8 +120,8 @@ export const event = {
 
   /** Flip a section to "published" once its content is ready. Drives the coming-soon states. */
   sections: {
-    speakers: "coming-soon",
-    schedule: "coming-soon",
+    speakers: "published",
+    schedule: "published",
   } as Record<"speakers" | "schedule", SectionStatus>,
 } as const;
 

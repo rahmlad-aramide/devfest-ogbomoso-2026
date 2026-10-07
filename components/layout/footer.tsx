@@ -17,12 +17,14 @@ export function Footer() {
 
         <div className="mt-14 grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <Wordmark className="text-white" />
+            <Wordmark variant="dark" />
             <p className="mt-4 max-w-sm text-white/70">
               A community-led developer conference by {event.organizer}. Talks, workshops and the people
               building tech in Ogbomoso.
             </p>
             <RsvpButton variant="inverse" size="lg" className="mt-6" />
+            {/* eslint-disable-next-line @next/next/no-img-element -- static local SVG, next/image can't serve SVG (see next.config.ts) */}
+            <img src="/brand/gdg-ogbomoso-logo.svg" alt="Google Developer Groups Ogbomoso" className="mt-8 h-6 w-auto opacity-90" />
           </div>
 
           <div>

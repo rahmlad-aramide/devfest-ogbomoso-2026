@@ -23,18 +23,25 @@ export interface Speaker {
   socials?: SocialLink[];
 }
 
-export type SessionKind = "keynote" | "talk" | "workshop" | "panel" | "break" | "social";
+export type SessionKind = "keynote" | "talk" | "workshop" | "panel" | "break" | "social" | "sponsor" | "tbd";
 
 export interface Session {
   id: string;
-  /** Local 24h time in the event timezone, e.g. "09:30". DevFest 2026 is a single day. */
+  /** DevFest Ogbomoso 2026 runs over two days: 1 = Workshops & Codelabs, 2 = Main Conference. */
+  day: 1 | 2;
+  /** Local 24h time in the event timezone, e.g. "09:30". */
   start: string;
   end: string;
   title: string;
   kind: SessionKind;
   description?: string;
+  /** Content theme, e.g. "AI", "Engineering and Security", "Cloud" (day 1 breakout sessions). */
   track?: string;
+  /** Ids of speakers from content/speakers.ts, once their full profile exists. */
   speakerIds?: string[];
+  /** Plain-text presenter name(s), used until a full Speaker profile exists. */
+  speakerNames?: string[];
+  /** Breakout block label, e.g. "Track 1" (day 1 only — sessions sharing a block run in parallel). */
   room?: string;
 }
 
@@ -50,7 +57,7 @@ export interface TeamMember {
   socials?: SocialLink[];
 }
 
-export type TeamName = "Organizers" | "Media and Publicity" | "Design" | "Dev";
+export type TeamName = "Organizers" | "Media and Publicity" | "Design" | "Dev" | "Programs" | "Content";
 
 export interface Faq {
   question: string;
