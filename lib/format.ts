@@ -57,3 +57,20 @@ export const venueLabel = () =>
 
 /** "Ogbomoso, Oyo State" */
 export const cityLabel = () => `${event.venue.city}, ${event.venue.state}`;
+
+const dayInfo = (day: 1 | 2) => event.days[day - 1];
+
+/** "Friday, October 16, 2026" for the given event day. */
+export const formatDayDate = (day: 1 | 2) => dateLong.format(new Date(dayInfo(day).start));
+
+/** "9:00 AM – 3:50 PM (GMT+1)" for the given event day. */
+export const formatDayTimeRange = (day: 1 | 2) => {
+  const d = dayInfo(day);
+  return `${time.format(new Date(d.start))} – ${time.format(new Date(d.end))} (${eventTimezoneLabel()})`;
+};
+
+/** "SQI College of ICT, Opposite Yoaco Filling Station, Yoaco, Ogbomoso" for the given event day. */
+export const dayVenueLabel = (day: 1 | 2) => {
+  const { name, address } = dayInfo(day).venue;
+  return address ? `${name}, ${address}` : name;
+};

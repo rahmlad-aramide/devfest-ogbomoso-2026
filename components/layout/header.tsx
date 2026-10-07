@@ -8,7 +8,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-canvas/85 backdrop-blur-md">
       <div className="relative mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Wordmark className="text-navy" />
+        <Wordmark variant="light" />
 
         <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex items-center gap-8">

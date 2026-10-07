@@ -1,12 +1,11 @@
 import { event } from "./event";
 import { site } from "./site";
 import type { Faq } from "./types";
-import { formatEventDate, formatEventTimeRange, isVenueAnnounced } from "@/lib/format";
+import { dayVenueLabel, formatDayDate } from "@/lib/format";
 
 /**
- * Rewritten for the single-day 2026 format. Answers that depend on event data are built
- * from `content/event.ts`, so they update automatically. Optional entries appear only
- * when their link is set in `event.links`.
+ * Answers that depend on event data are built from `content/event.ts`, so they update
+ * automatically. Optional entries appear only when their link is set in `event.links`.
  */
 export const faqs: Faq[] = [
   {
@@ -16,11 +15,7 @@ export const faqs: Faq[] = [
   },
   {
     question: "When and where is it happening?",
-    answer: `${event.fullName} is a one-day event on ${formatEventDate()}, ${formatEventTimeRange()}, in ${event.venue.city}, ${event.venue.state}. ${
-      isVenueAnnounced()
-        ? `The venue is ${event.venue.name}.`
-        : "The venue will be announced soon. Follow us for the reveal."
-    }`,
+    answer: `${event.fullName} runs over two days. Day 1 (${event.days[0].label}) is on ${formatDayDate(1)} at ${dayVenueLabel(1)}. Day 2 (${event.days[1].label}) — the main event — is on ${formatDayDate(2)} at ${dayVenueLabel(2)}.`,
   },
   {
     question: "Who can attend?",

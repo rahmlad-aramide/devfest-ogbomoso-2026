@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { event } from "@/content/event";
 import { schedule } from "@/content/schedule";
-import { formatEventDate, formatSessionTime } from "@/lib/format";
+import { formatSessionTime } from "@/lib/format";
 
 const PREVIEW_COUNT = 4;
 
@@ -16,7 +16,11 @@ export function Schedule() {
       <Container>
         {published ? (
           <>
-            <SectionHeading id="schedule-title" title="The day, hour by hour" description={formatEventDate()} />
+            <SectionHeading
+              id="schedule-title"
+              title="Two days, block by block"
+              description="Workshops & codelabs on day one, the main conference on day two. Tentative — updated as sessions are confirmed."
+            />
             <div className="mt-12">
               <Timeline sessions={schedule.slice(0, PREVIEW_COUNT)} />
             </div>

@@ -7,9 +7,9 @@ import { formatSessionTime } from "@/lib/format";
 export function SpeakerCard({ speaker, sessions = [] }: { speaker: Speaker; sessions?: Session[] }) {
   return (
     <figure>
-      <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-primary-soft">
+      <div className="relative aspect-[5/4] overflow-hidden rounded-2xl bg-primary-soft">
         {speaker.photo ? (
-          <Image src={speaker.photo} alt="" fill sizes="(min-width: 1024px) 260px, 45vw" className="object-cover object-top" />
+          <Image src={speaker.photo} alt="" fill className="object-cover object-top" />
         ) : null}
       </div>
       <figcaption className="mt-3">

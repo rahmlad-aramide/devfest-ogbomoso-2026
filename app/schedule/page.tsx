@@ -1,4 +1,4 @@
-import { Timeline } from "@/components/schedule/timeline";
+import { DayTabs } from "@/components/schedule/day-tabs";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Container } from "@/components/ui/container";
 import { PageHeader } from "@/components/ui/page-header";
@@ -14,7 +14,7 @@ const published = event.sections.schedule === "published" && schedule.length > 0
 export const metadata = pageMetadata({
   title: "Schedule",
   description: published
-    ? `The full ${event.fullName} agenda for ${formatEventDate()}.`
+    ? `The tentative two-day ${event.fullName} agenda: workshops & codelabs, then the main conference.`
     : `The ${event.fullName} agenda is coming soon. ${formatEventDate()}, ${formatEventTimeRange()}.`,
   path: "/schedule",
   noindex: !published,
@@ -26,13 +26,17 @@ export default function SchedulePage() {
       <JsonLd data={breadcrumbJsonLd([{ name: "Schedule", path: "/schedule" }])} />
       <PageHeader
         title={published ? "Schedule" : "Schedule coming soon"}
-        description={`${formatEventDate()}, ${formatEventTimeRange()}`}
+        description={
+          published
+            ? "Two days: workshops & codelabs, then the main conference. Tentative — details will be updated as they're confirmed."
+            : `${formatEventDate()}, ${formatEventTimeRange()}`
+        }
         glyph="double-slash"
         glyphColor="text-google-red"
       />
       <Container className="py-16 sm:py-20">
         {published ? (
-          <Timeline sessions={schedule} />
+          <DayTabs sessions={schedule} />
         ) : (
           <div className="max-w-xl">
             <p className="text-lg leading-relaxed text-muted">
