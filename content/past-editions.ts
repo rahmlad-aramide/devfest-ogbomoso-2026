@@ -7,6 +7,9 @@ export interface Photo {
   src: string;
   alt: string;
   caption: string;
+  /** Intrinsic dimensions reserve space and preserve the original composition. */
+  width: number;
+  height: number;
 }
 
 /**
@@ -23,15 +26,15 @@ export const throwback = {
   /** TODO(2026): confirm which edition this Google Photos album belongs to before linking it. */
   albumUrl: null as string | null,
   photos: [
-    { src: "/images/devfest-2024/01-keynote.webp", alt: "A speaker delivering the keynote to a packed hall", caption: "Sodiq Akinjobi, GDG Regional Lead, delivering the keynote" },
-    { src: "/images/devfest-2024/02-group-photo.webp", alt: "Group photo of DevFest 2024 attendees", caption: "Faces of the attendees at DevFest '24" },
-    { src: "/images/devfest-2024/03-check-in.webp", alt: "Volunteers checking attendees in at the registration desk", caption: "Volunteers on duty, checking attendees in" },
-    { src: "/images/devfest-2024/04-lead-organizers.webp", alt: "GDG Ogbomoso lead organizers posing with a guest", caption: "GDG Ogbomoso lead organizers with Sodiq Akinjobi" },
-    { src: "/images/devfest-2024/05-gdg-leads.webp", alt: "Past and present LAUTECH GDG on Campus leads", caption: "LAUTECH past and present GDG on Campus leads" },
-    { src: "/images/devfest-2024/06-organizers-prep.webp", alt: "Organizers working on laptops in the hall", caption: "Organizers preparing for the next sessions" },
-    { src: "/images/devfest-2024/07-gaming-session.webp", alt: "A host anchoring an audience quiz game", caption: "The gaming session, live on Menti" },
-    { src: "/images/devfest-2024/08-organizers-in-action.webp", alt: "Collage of organizers on stage", caption: "Organizers in action" },
-    { src: "/images/devfest-2024/09-session-recap.webp", alt: "A speaker's session recap on the projector screen", caption: "A session recap on the big screen" },
+    { src: "/images/devfest-2024/01-keynote.webp", width: 1600, height: 1067, alt: "A speaker delivering the keynote to a packed hall", caption: "Sodiq Akinjobi, GDG Regional Lead, delivering the keynote" },
+    { src: "/images/devfest-2024/02-group-photo.webp", width: 1600, height: 800, alt: "Group photo of DevFest 2024 attendees", caption: "Faces of the attendees at DevFest '24" },
+    { src: "/images/devfest-2024/03-check-in.webp", width: 1600, height: 1067, alt: "Volunteers checking attendees in at the registration desk", caption: "Volunteers on duty, checking attendees in" },
+    { src: "/images/devfest-2024/04-lead-organizers.webp", width: 1600, height: 1067, alt: "GDG Ogbomoso lead organizers posing with a guest", caption: "GDG Ogbomoso lead organizers with Sodiq Akinjobi" },
+    { src: "/images/devfest-2024/05-gdg-leads.webp", width: 1600, height: 1105, alt: "Past and present LAUTECH GDG on Campus leads", caption: "LAUTECH past and present GDG on Campus leads" },
+    { src: "/images/devfest-2024/06-organizers-prep.webp", width: 1600, height: 1067, alt: "Organizers working on laptops in the hall", caption: "Organizers preparing for the next sessions" },
+    { src: "/images/devfest-2024/07-gaming-session.webp", width: 1600, height: 1067, alt: "A host anchoring an audience quiz game", caption: "The gaming session, live on Menti" },
+    { src: "/images/devfest-2024/08-organizers-in-action.webp", width: 960, height: 720, alt: "Collage of organizers on stage", caption: "Organizers in action" },
+    { src: "/images/devfest-2024/09-session-recap.webp", width: 1600, height: 1067, alt: "A speaker's session recap on the projector screen", caption: "A session recap on the big screen" },
   ] satisfies Photo[],
 };
 

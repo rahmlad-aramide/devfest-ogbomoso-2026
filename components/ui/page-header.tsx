@@ -7,24 +7,27 @@ export function PageHeader({
   description,
   glyph = "chevron-right",
   glyphColor = "text-google-yellow",
+  compact = false,
 }: {
   title: string;
   description?: string;
   glyph?: GlyphName;
   glyphColor?: string;
+  /** Shorter title band for pages where the content should appear immediately. */
+  compact?: boolean;
 }) {
   return (
     <div className="overflow-hidden bg-navy text-white">
-      <Container className="relative py-14 sm:py-20">
-        <h1 className="max-w-3xl font-display text-5xl font-extrabold tracking-tighter text-balance sm:text-7xl">
+      <Container className={compact ? "relative py-8 sm:py-10" : "relative py-14 sm:py-20"}>
+        <h1 className={`max-w-3xl font-display font-extrabold tracking-tighter text-balance ${compact ? "text-4xl sm:text-5xl" : "text-5xl sm:text-7xl"}`}>
           {title}
         </h1>
         {description ? (
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/80 sm:text-xl">{description}</p>
+          <p className={compact ? "mt-3 max-w-xl leading-relaxed text-white/80" : "mt-5 max-w-xl text-lg leading-relaxed text-white/80 sm:text-xl"}>{description}</p>
         ) : null}
         <Glyph
           name={glyph}
-          className={`pointer-events-none absolute top-1/2 right-4 hidden size-56 -translate-y-1/2 rotate-6 lg:block ${glyphColor}`}
+          className={`pointer-events-none absolute top-1/2 right-4 hidden -translate-y-1/2 rotate-6 lg:block ${compact ? "size-32" : "size-56"} ${glyphColor}`}
         />
       </Container>
     </div>
