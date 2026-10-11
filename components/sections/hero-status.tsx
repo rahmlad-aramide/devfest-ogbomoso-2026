@@ -4,8 +4,8 @@ import { ButtonLink } from "@/components/ui/button";
 import { useEventPhase } from "@/components/ui/event-phase";
 import { RsvpButton } from "@/components/ui/rsvp-button";
 import { event } from "@/content/event";
-import { getEventPhase, getTimeLeft } from "@/lib/event-status";
-import { formatEventDate, formatEventTimeRange } from "@/lib/format";
+import { getEventPhase, getLiveDay, getTimeLeft } from "@/lib/event-status";
+import { formatDayDate, formatDayTimeRange } from "@/lib/format";
 import { useNow } from "@/lib/use-now";
 
 const units = ["days", "hours", "minutes", "seconds"] as const;
@@ -39,9 +39,15 @@ export function HeroCountdown() {
   const now = useNow();
   const phase = now === null ? "upcoming" : getEventPhase(now);
   const left = now === null ? null : getTimeLeft(now);
+  const liveDay = now === null ? null : getLiveDay(now);
+  const mainDayStarted = now !== null && now >= Date.parse(event.start);
 
-  if (phase === "live") {
-    return <p className="font-display text-3xl font-extrabold text-google-yellow sm:text-4xl">It&apos;s happening today.</p>;
+  if (phase === "live" && (liveDay !== null || mainDayStarted)) {
+    return (
+      <p className="font-display text-3xl font-extrabold text-google-yellow sm:text-4xl">
+        {liveDay === 1 ? "Day 1 is live." : "Day 2 is live."}
+      </p>
+    );
   }
   if (phase === "ended") {
     return (
@@ -54,7 +60,7 @@ export function HeroCountdown() {
   return (
     <div>
       <p className="sr-only">
-        {event.fullName} starts on {formatEventDate()}, {formatEventTimeRange()}.
+        {event.fullName} is a two-day event. The main conference is on {formatDayDate(2)}, {formatDayTimeRange(2)}.
       </p>
       <div aria-hidden="true" className="flex gap-5 sm:gap-8">
         {units.map((unit) => (
@@ -66,6 +72,9 @@ export function HeroCountdown() {
           </div>
         ))}
       </div>
+      <p aria-hidden="true" className="mt-3 text-sm text-white/65">
+        until the main conference
+      </p>
     </div>
   );
 }

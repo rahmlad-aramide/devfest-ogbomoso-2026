@@ -21,8 +21,8 @@ export const schedule: Session[] = [
     kind: "talk",
     speakerNames: ["Glory Olaifa"],
   },
-  { id: "d1-tbd-0945", day: 1, start: "09:45", end: "10:15", title: "To be announced", kind: "tbd" },
-  { id: "d1-tbd-1015", day: 1, start: "10:15", end: "10:35", title: "To be announced", kind: "tbd" },
+  // { id: "d1-tbd-0945", day: 1, start: "09:45", end: "10:15", title: "To be announced", kind: "tbd" },
+  // { id: "d1-tbd-1015", day: 1, start: "10:15", end: "10:35", title: "To be announced", kind: "tbd" },
   { id: "d1-breakout-transition", day: 1, start: "10:35", end: "10:45", title: "Breakout room transition", kind: "break" },
 
   // Track 1 — three parallel breakout sessions
@@ -159,7 +159,7 @@ export const schedule: Session[] = [
     kind: "panel",
     speakerIds: ["kehinde-quyum"],
   },
-  { id: "d2-tbd-1030", day: 2, start: "10:30", end: "11:10", title: "To be announced", kind: "tbd" },
+  // { id: "d2-tbd-1030", day: 2, start: "10:30", end: "11:10", title: "To be announced", kind: "tbd" },
   {
     id: "d2-keynote-1",
     day: 2,
@@ -169,7 +169,7 @@ export const schedule: Session[] = [
     kind: "keynote",
     speakerNames: ["Sodiq Akinjobi"],
   },
-  { id: "d2-tbd-1155", day: 2, start: "11:55", end: "12:20", title: "To be announced", kind: "tbd" },
+  // { id: "d2-tbd-1155", day: 2, start: "11:55", end: "12:20", title: "To be announced", kind: "tbd" },
   {
     id: "d2-problem-to-product",
     day: 2,

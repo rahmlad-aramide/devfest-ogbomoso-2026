@@ -20,9 +20,14 @@ export interface Photo {
 export const throwback = {
   show: true,
   year: 2024,
-  title: "Throwback to DevFest '24",
+  title: "DevFest over the years",
   subtitle:
-    "The energy, the people, the jollof, the pure tech vibes. Here's a look at how we showed up last time.",
+    "The energy, the people, the jollof, the pure tech vibes. A look back at every DevFest Ogbomoso so far.",
+  /**
+   * Optional headline numbers. Leave empty to hide the strip; add entries to show it, e.g.
+   * { value: 1000, suffix: "+", label: "Attendees" }.
+   */
+  stats: [] as { value: number; suffix?: string; label: string }[],
   /** TODO(2026): confirm which edition this Google Photos album belongs to before linking it. */
   albumUrl: null as string | null,
   photos: [

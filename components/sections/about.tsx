@@ -12,7 +12,7 @@ export function About() {
     <section id="about" aria-labelledby="about-title" className="py-20 sm:py-28">
       <Container className="grid gap-14 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
         <div>
-          <SectionHeading id="about-title" title="Built for everyone who builds" />
+          <SectionHeading id="about-title" title="For everyone who builds" />
           <div className="mt-6 max-w-xl space-y-5 text-lg leading-relaxed text-muted">
             {event.about.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
@@ -54,7 +54,7 @@ export function About() {
             </p>
             {rsvps ? (
               <p className="mt-4 font-semibold text-navy">
-                {rsvps.count} people have already RSVP&apos;d.
+                {rsvps.count}+ people have already RSVP&apos;d.
               </p>
             ) : null}
           </div>

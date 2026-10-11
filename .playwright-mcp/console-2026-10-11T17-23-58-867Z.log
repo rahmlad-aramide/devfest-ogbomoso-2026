@@ -1,0 +1,278 @@
+[    1285ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    1390ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    2235ms] [WARNING] Image with src "/images/speakers-2026/samuel-abada.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    2239ms] [WARNING] Image with src "/images/speakers-2026/david-oluwabusayo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    2261ms] [WARNING] Image with src "/images/speakers-2026/mbaoma-mary.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    2271ms] [WARNING] Image with src "/images/speakers-2026/dami-oshun.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    2296ms] [WARNING] Image with src "/images/speakers-2026/auwal-ms.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    2310ms] [WARNING] Image with src "/images/speakers-2026/miracle-olabode.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    2327ms] [WARNING] Image with src "/images/speakers-2026/mustapha-adekunle.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    2338ms] [WARNING] Image with src "/images/speakers-2026/christopher-nwosu-madueke.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  155272ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  155882ms] [ERROR] ./content/event.ts:104:19
+Error: Expression expected
+  102 | ... * Set to null to hide.
+  103 | ... */
+> 104 | ...rsvps: { count: , asOf: "2026-09...
+      |                    ^
+  105 | ...
+  106 | .../** Last year's edition, in the ...
+  107 | ...lastEdition: { year: 2025, atten...
+
+Parsing ecmascript source code failed
+
+Import traces:
+  #1 [Server Component]:
+    ./content/event.ts
+    ./app/opengraph-image.tsx
+    ./app/opengraph-image--metadata.js
+
+  #2 [Server Component]:
+    ./content/event.ts
+    ./app/twitter-image.tsx
+    ./app/twitter-image--metadata.js
+
+  #3 [Server Component]:
+    ./content/event.ts
+    ./components/layout/footer.tsx
+    ./app/layout.tsx
+
+  #4 [Server Component]:
+    ./content/event.ts
+    ./components/sections/speakers.tsx
+    ./app/page.tsx
+
+  #5 [Client Component Browser]:
+    ./content/event.ts [Client Component Browser]
+    ./components/sections/hero-status.tsx [Client Component Browser]
+    ./components/sections/hero-status.tsx [Server Component]
+    ./components/sections/hero.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  #6 [Client Component Browser]:
+    ./content/event.ts [Client Component Browser]
+    ./components/ui/rsvp-button.tsx [Client Component Browser]
+    ./components/ui/rsvp-button.tsx [Server Component]
+    ./components/layout/header.tsx [Server Component]
+    ./app/layout.tsx [Server Component]
+
+  #7 [Client Component SSR]:
+    ./content/event.ts [Client Component SSR]
+    ./components/sections/hero-status.tsx [Client Component SSR]
+    ./components/sections/hero-status.tsx [Server Component]
+    ./components/sections/hero.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  #8 [Client Component SSR]:
+    ./content/event.ts [Client Component SSR]
+    ./components/ui/rsvp-button.tsx [Client Component SSR]
+    ./components/ui/rsvp-button.tsx [Server Component]
+    ./components/layout/header.tsx [Server Component]
+    ./app/layout.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052
+[  156266ms] [ERROR] ./content/event.ts:104:19
+Error: Expression expected
+  102 | ... * Set to null to hide.
+  103 | ... */
+> 104 | ...rsvps: { count: , asOf: "2026-09...
+      |                    ^
+  105 | ...
+  106 | .../** Last year's edition, in the ...
+  107 | ...lastEdition: { year: 2025, atten...
+
+Parsing ecmascript source code failed
+
+Import traces:
+  #1 [Server Component]:
+    ./content/event.ts
+    ./app/opengraph-image.tsx
+    ./app/opengraph-image--metadata.js
+
+  #2 [Server Component]:
+    ./content/event.ts
+    ./app/twitter-image.tsx
+    ./app/twitter-image--metadata.js
+
+  #3 [Server Component]:
+    ./content/event.ts
+    ./components/layout/footer.tsx
+    ./app/layout.tsx
+
+  #4 [Server Component]:
+    ./content/event.ts
+    ./components/sections/speakers.tsx
+    ./app/page.tsx
+
+  #5 [Client Component Browser]:
+    ./content/event.ts [Client Component Browser]
+    ./components/sections/hero-status.tsx [Client Component Browser]
+    ./components/sections/hero-status.tsx [Server Component]
+    ./components/sections/hero.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  #6 [Client Component Browser]:
+    ./content/event.ts [Client Component Browser]
+    ./components/ui/rsvp-button.tsx [Client Component Browser]
+    ./components/ui/rsvp-button.tsx [Server Component]
+    ./components/layout/header.tsx [Server Component]
+    ./app/layout.tsx [Server Component]
+
+  #7 [Client Component SSR]:
+    ./content/event.ts [Client Component SSR]
+    ./components/sections/hero-status.tsx [Client Component SSR]
+    ./components/sections/hero-status.tsx [Server Component]
+    ./components/sections/hero.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  #8 [Client Component SSR]:
+    ./content/event.ts [Client Component SSR]
+    ./components/ui/rsvp-button.tsx [Client Component SSR]
+    ./components/ui/rsvp-button.tsx [Server Component]
+    ./components/layout/header.tsx [Server Component]
+    ./app/layout.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052
+[  160143ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  160238ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  160256ms] [LOG] [Fast Refresh] done in 160ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  160566ms] [LOG] [Fast Refresh] done in 160ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  164459ms] [ERROR] ./content/event.ts:104:23
+Error: Expression expected
+  102 | ...et to null to hide.
+  103 | ...
+> 104 | ...s: { count: 600+, asOf: "2026-09...
+      |                    ^
+  105 | ...
+  106 | ...Last year's edition, in the past...
+  107 | ...Edition: { year: 2025, attendees...
+
+Parsing ecmascript source code failed
+
+Import traces:
+  #1 [Server Component]:
+    ./content/event.ts
+    ./app/opengraph-image.tsx
+    ./app/opengraph-image--metadata.js
+
+  #2 [Server Component]:
+    ./content/event.ts
+    ./app/twitter-image.tsx
+    ./app/twitter-image--metadata.js
+
+  #3 [Server Component]:
+    ./content/event.ts
+    ./components/layout/footer.tsx
+    ./app/layout.tsx
+
+  #4 [Server Component]:
+    ./content/event.ts
+    ./components/sections/speakers.tsx
+    ./app/page.tsx
+
+  #5 [Client Component Browser]:
+    ./content/event.ts [Client Component Browser]
+    ./components/sections/hero-status.tsx [Client Component Browser]
+    ./components/sections/hero-status.tsx [Server Component]
+    ./components/sections/hero.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  #6 [Client Component Browser]:
+    ./content/event.ts [Client Component Browser]
+    ./components/ui/rsvp-button.tsx [Client Component Browser]
+    ./components/ui/rsvp-button.tsx [Server Component]
+    ./components/layout/header.tsx [Server Component]
+    ./app/layout.tsx [Server Component]
+
+  #7 [Client Component SSR]:
+    ./content/event.ts [Client Component SSR]
+    ./components/sections/hero-status.tsx [Client Component SSR]
+    ./components/sections/hero-status.tsx [Server Component]
+    ./components/sections/hero.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  #8 [Client Component SSR]:
+    ./content/event.ts [Client Component SSR]
+    ./components/ui/rsvp-button.tsx [Client Component SSR]
+    ./components/ui/rsvp-button.tsx [Server Component]
+    ./components/layout/header.tsx [Server Component]
+    ./app/layout.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052
+[  168984ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  169001ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  173630ms] [LOG] [Fast Refresh] done in 731ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  175482ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  175995ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  177313ms] [WARNING] Image with src "/images/speakers-2026/samuel-abada.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  177322ms] [WARNING] Image with src "/images/speakers-2026/david-oluwabusayo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  177322ms] [WARNING] Image with src "/images/speakers-2026/mbaoma-mary.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  177324ms] [WARNING] Image with src "/images/speakers-2026/dami-oshun.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  177324ms] [WARNING] Image with src "/images/speakers-2026/auwal-ms.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  177325ms] [WARNING] Image with src "/images/speakers-2026/miracle-olabode.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  177325ms] [WARNING] Image with src "/images/speakers-2026/mustapha-adekunle.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  177325ms] [WARNING] Image with src "/images/speakers-2026/christopher-nwosu-madueke.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  184868ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  185567ms] [LOG] [Fast Refresh] done in 85ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  185699ms] [LOG] [Fast Refresh] done in 85ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  186680ms] [LOG] [Fast Refresh] done in 85ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  186815ms] [LOG] [Fast Refresh] done in 85ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  229080ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  229090ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  229182ms] [LOG] [Fast Refresh] done in 57ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  229218ms] [LOG] [Fast Refresh] done in 57ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  229764ms] [LOG] [Fast Refresh] done in 57ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  231225ms] [LOG] [Fast Refresh] done in 57ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  234036ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  234262ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  235651ms] [WARNING] Image with src "/images/speakers-2026/samuel-abada.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  235652ms] [WARNING] Image with src "/images/speakers-2026/david-oluwabusayo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  235652ms] [WARNING] Image with src "/images/speakers-2026/mbaoma-mary.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  235653ms] [WARNING] Image with src "/images/speakers-2026/dami-oshun.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  235653ms] [WARNING] Image with src "/images/speakers-2026/auwal-ms.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  235655ms] [WARNING] Image with src "/images/speakers-2026/miracle-olabode.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  235656ms] [WARNING] Image with src "/images/speakers-2026/mustapha-adekunle.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  235656ms] [WARNING] Image with src "/images/speakers-2026/christopher-nwosu-madueke.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  300141ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  300183ms] [LOG] [Fast Refresh] done in 91ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  300720ms] [LOG] [Fast Refresh] done in 91ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  302311ms] [LOG] [Fast Refresh] done in 91ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  302670ms] [LOG] [Fast Refresh] done in 91ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  308368ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  308984ms] [LOG] [Fast Refresh] done in 36ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  310924ms] [LOG] [Fast Refresh] done in 36ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  311135ms] [LOG] [Fast Refresh] done in 36ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  390357ms] [LOG] [Fast Refresh] done in 36ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  878676ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  879029ms] [LOG] [Fast Refresh] done in 401ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  879139ms] [LOG] [Fast Refresh] done in 401ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  880388ms] [LOG] [Fast Refresh] done in 401ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  882267ms] [LOG] [Fast Refresh] done in 401ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  882468ms] [LOG] [Fast Refresh] done in 401ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  890170ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  891090ms] [LOG] [Fast Refresh] done in 955ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  892038ms] [LOG] [Fast Refresh] done in 955ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  892773ms] [LOG] [Fast Refresh] done in 955ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  894858ms] [LOG] [Fast Refresh] done in 955ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  899466ms] [LOG] [Fast Refresh] done in 955ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  964383ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  965310ms] [LOG] [Fast Refresh] done in 786ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  965484ms] [LOG] [Fast Refresh] done in 786ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  968099ms] [LOG] [Fast Refresh] done in 786ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  970493ms] [LOG] [Fast Refresh] done in 786ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  972147ms] [LOG] [Fast Refresh] done in 786ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
