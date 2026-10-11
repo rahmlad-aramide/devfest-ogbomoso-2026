@@ -101,7 +101,7 @@ export const event = {
    * Manually maintained: update by hand from the Bevy page, it is NOT live.
    * Set to null to hide.
    */
-  rsvps: { count: 359, asOf: "2026-09-18" } as { count: number; asOf: string } | null,
+  rsvps: { count: 600, asOf: "2026-09-18" } as { count: number; asOf: string } | null,
 
   /** Last year's edition, in the past tense so it can never go stale. */
   lastEdition: { year: 2025, attendees: "500+", note: "over two days" },

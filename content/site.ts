@@ -46,5 +46,6 @@ export const nav: NavItem[] = [
 export const secondaryNav: NavItem[] = [
   { label: "FAQ", href: "/#faqs" },
   { label: "Memories", href: "/memories" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Code of conduct", href: "/code-of-conduct" },
 ];

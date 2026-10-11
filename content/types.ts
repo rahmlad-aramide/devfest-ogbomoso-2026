@@ -57,6 +57,32 @@ export interface TeamMember {
   socials?: SocialLink[];
 }
 
+export interface VolunteerLead {
+  name: string;
+  /** Shown instead of "Team lead" when the lead covers one area, e.g. "Media". */
+  label?: string;
+  photo?: string;
+}
+
+export interface VolunteerGroup {
+  /** Sub-group name inside a unit, e.g. "Logistics". Omit for a unit with a single group. */
+  name?: string;
+  lead?: VolunteerLead;
+  members: string[];
+}
+
+/** A volunteering unit. Contact details are deliberately not stored here: this data is public. */
+export interface VolunteerTeam {
+  name: string;
+  /** One-line focus. */
+  focus: string;
+  purpose: string;
+  /** What the role entails. */
+  duties: string[];
+  leads: VolunteerLead[];
+  groups: VolunteerGroup[];
+}
+
 export type TeamName = "Organizers" | "Media and Publicity" | "Design" | "Dev" | "Programs" | "Content";
 
 export interface Faq {

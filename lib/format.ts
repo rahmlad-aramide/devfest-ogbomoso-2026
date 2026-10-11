@@ -74,3 +74,19 @@ export const dayVenueLabel = (day: 1 | 2) => {
   const { name, address } = dayInfo(day).venue;
   return address ? `${name}, ${address}` : name;
 };
+
+const dayNumber = new Intl.DateTimeFormat("en-US", { day: "numeric", timeZone: tz });
+const weekdayShort = new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: tz });
+const monthShort = new Intl.DateTimeFormat("en-US", { month: "short", timeZone: tz });
+
+/** { date: "16", weekday: "Fri", month: "Oct" } for the given event day. */
+export const formatDayParts = (day: 1 | 2) => {
+  const d = new Date(dayInfo(day).start);
+  return { date: dayNumber.format(d), weekday: weekdayShort.format(d), month: monthShort.format(d) };
+};
+
+/** "9:00 AM – 3:50 PM" (no timezone suffix) for compact day cards. */
+export const formatDayHours = (day: 1 | 2) => {
+  const d = dayInfo(day);
+  return `${time.format(new Date(d.start))} – ${time.format(new Date(d.end))}`;
+};

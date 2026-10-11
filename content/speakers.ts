@@ -12,8 +12,8 @@ export const speakers: Speaker[] = [
   {
     id: "samuel-abada",
     name: "Samuel Abada",
-    role: "Senior Mobile Engineer",
-    company: "Busha",
+    role: "GDE",
+    company: "Flutter & Dart",
     photo: "/images/speakers-2026/samuel-abada.webp",
     sessionIds: ["d1-track1-agent-skills"],
   },

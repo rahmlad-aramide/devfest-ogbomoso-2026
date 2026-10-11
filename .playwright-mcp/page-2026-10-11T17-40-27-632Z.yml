@@ -1,0 +1,845 @@
+- generic [active] [ref=f5e1]:
+  - link "Skip to content" [ref=f5e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f5e3]:
+    - generic [ref=f5e4]:
+      - link "DevFest Ogbomoso 2026 home" [ref=f5e5] [cursor=pointer]:
+        - /url: /
+        - img "DevFest Ogbomoso 2026" [ref=f5e6]
+      - generic [ref=f5e7]:
+        - link "RSVP now (opens in a new tab)" [ref=f5e8] [cursor=pointer]:
+          - /url: https://gdg.community.dev/events/details/google-gdg-ogbomoso-presents-devfest-ogbomoso-2026/
+          - text: RSVP now
+          - generic [ref=f5e9]: (opens in a new tab)
+        - button "Open menu" [ref=f5e11]
+  - main [ref=f5e13]:
+    - region [ref=f5e14]:
+      - generic [ref=f5e17]:
+        - generic [ref=f5e18]:
+          - paragraph [ref=f5e19]: Two days · Oct 16–17, 2026
+          - heading "DevFest Ogbomoso 2026" [level=1] [ref=f5e21]:
+            - generic [ref=f5e22]: DevFest
+            - generic [ref=f5e23]: Ogbomoso
+            - generic [ref=f5e24]: "2026"
+          - paragraph [ref=f5e25]: Ogbomoso's biggest tech gathering returns.
+          - list [ref=f5e26]:
+            - listitem [ref=f5e27]:
+              - generic [ref=f5e28]:
+                - generic [ref=f5e29]:
+                  - generic [ref=f5e30]: "16"
+                  - generic [ref=f5e31]: Fri · Oct
+                - generic [ref=f5e32]:
+                  - paragraph [ref=f5e33]: Day 1
+                  - paragraph [ref=f5e34]: Workshops & Codelabs
+              - list [ref=f5e35]:
+                - listitem [ref=f5e36]: 9:00 AM – 3:50 PM
+                - listitem [ref=f5e40]: SQI College of ICT
+            - listitem [ref=f5e44]:
+              - generic [ref=f5e45]:
+                - generic [ref=f5e46]:
+                  - generic [ref=f5e47]: "17"
+                  - generic [ref=f5e48]: Sat · Oct
+                - generic [ref=f5e49]:
+                  - paragraph [ref=f5e50]: Day 2
+                  - paragraph [ref=f5e51]: Main Conference
+              - list [ref=f5e52]:
+                - listitem [ref=f5e53]: 8:00 AM – 5:15 PM
+                - listitem [ref=f5e57]: The Assembly
+          - generic [ref=f5e61]:
+            - link "RSVP now (opens in a new tab)" [ref=f5e62] [cursor=pointer]:
+              - /url: https://gdg.community.dev/events/details/google-gdg-ogbomoso-presents-devfest-ogbomoso-2026/
+              - text: RSVP now
+              - generic [ref=f5e63]: (opens in a new tab)
+            - link "What to expect" [ref=f5e64] [cursor=pointer]:
+              - /url: /#about
+        - generic [ref=f5e92]:
+          - paragraph [ref=f5e93]: DevFest Ogbomoso 2026 is a two-day event. The main conference is on Saturday, October 17, 2026, 8:00 AM – 5:15 PM (GMT+1).
+          - generic [aria-hidden] [ref=f5e94]:
+            - generic [ref=f5e95]:
+              - generic [ref=f5e96]: "05"
+              - generic [ref=f5e97]: days
+            - generic [ref=f5e98]:
+              - generic [ref=f5e99]: "13"
+              - generic [ref=f5e100]: hours
+            - generic [ref=f5e101]:
+              - generic [ref=f5e102]: "19"
+              - generic [ref=f5e103]: minutes
+            - generic [ref=f5e104]:
+              - generic [ref=f5e105]: "34"
+              - generic [ref=f5e106]: seconds
+          - paragraph [aria-hidden] [ref=f5e107]: until the main conference
+    - region [ref=f5e108]:
+      - generic [ref=f5e109]:
+        - generic [ref=f5e110]:
+          - heading "For everyone who builds" [level=2] [ref=f5e112]
+          - generic [ref=f5e113]:
+            - paragraph [ref=f5e114]: This year, DevFest Ogbomoso brings together professional developers, non-traditional developers, and tech-savvy builders who create with dev tools without calling themselves developers ("Builders").
+            - paragraph [ref=f5e115]: Whether you're writing production code, building with AI or no-code tools, launching a startup, or a student simply exploring a tech career, DevFest Ogbomoso is where you'll learn, find the right connections, and get the inspiration that takes you to the next level.
+          - list "Key themes" [ref=f5e116]:
+            - listitem [ref=f5e117]: AI
+            - listitem [ref=f5e118]: Gemini
+            - listitem [ref=f5e119]: Gemini Enterprise Agent Platform
+            - listitem [ref=f5e120]: Conference
+            - listitem [ref=f5e121]: Workshop / hands-on sessions
+        - generic [ref=f5e122]:
+          - heading "What to expect" [level=3] [ref=f5e123]
+          - list [ref=f5e124]:
+            - listitem [ref=f5e125]:
+              - generic [ref=f5e128]: Talks and hands-on workshops covering the latest in cloud, AI, mobile, and web
+            - listitem [ref=f5e129]:
+              - generic [ref=f5e132]: Real conversations with the people building Nigeria's tech ecosystem
+            - listitem [ref=f5e133]:
+              - generic [ref=f5e136]: A community that keeps showing up long after the closing keynote
+          - generic [ref=f5e137]:
+            - paragraph [ref=f5e138]: 500+
+            - paragraph [ref=f5e139]: people joined us last year, over two days. This year, we're going bigger.
+            - paragraph [ref=f5e140]: 600+ people have already RSVP'd.
+    - region [ref=f5e141]:
+      - generic [ref=f5e142]:
+        - generic [ref=f5e143]:
+          - heading "Meet the speakers" [level=2] [ref=f5e144]
+          - paragraph [ref=f5e145]: The people taking the stage on the day.
+        - list [ref=f5e146]:
+          - listitem [ref=f5e147]:
+            - figure [ref=f5e148]:
+              - generic [ref=f5e150]:
+                - paragraph [ref=f5e151]: Samuel Abada
+                - paragraph [ref=f5e152]: GDE, Flutter & Dart
+          - listitem [ref=f5e153]:
+            - figure [ref=f5e154]:
+              - generic [ref=f5e156]:
+                - paragraph [ref=f5e157]: David Oluwabusayo
+                - paragraph [ref=f5e158]: CTO, Paperless
+          - listitem [ref=f5e159]:
+            - figure [ref=f5e160]:
+              - generic [ref=f5e162]:
+                - paragraph [ref=f5e163]: Mary Mbaoma
+                - paragraph [ref=f5e164]: Cloud Engineer
+          - listitem [ref=f5e165]:
+            - figure [ref=f5e166]:
+              - generic [ref=f5e168]:
+                - paragraph [ref=f5e169]: Dami Oshun
+                - paragraph [ref=f5e170]: Software Engineer, Seamless Technologies
+          - listitem [ref=f5e171]:
+            - figure [ref=f5e172]:
+              - generic [ref=f5e174]:
+                - paragraph [ref=f5e175]: Auwal MS
+                - paragraph [ref=f5e176]: Lead, Developer Relations & Integrations, Moniepoint Group
+          - listitem [ref=f5e177]:
+            - figure [ref=f5e178]:
+              - generic [ref=f5e180]:
+                - paragraph [ref=f5e181]: Miracle Olabode
+                - paragraph [ref=f5e182]: GDE, Google Cloud
+          - listitem [ref=f5e183]:
+            - figure [ref=f5e184]:
+              - generic [ref=f5e186]:
+                - paragraph [ref=f5e187]: Mustapha Adekunle
+                - paragraph [ref=f5e188]: GDE, Google Cloud
+          - listitem [ref=f5e189]:
+            - figure [ref=f5e190]:
+              - generic [ref=f5e192]:
+                - paragraph [ref=f5e193]: Christopher Nwosu-Madueke
+                - paragraph [ref=f5e194]: Senior Mobile Engineer
+        - link "See all speakers" [ref=f5e195] [cursor=pointer]:
+          - /url: /speakers
+    - region [ref=f5e196]:
+      - generic [ref=f5e197]:
+        - generic [ref=f5e198]:
+          - heading "Two days, block by block" [level=2] [ref=f5e199]
+          - paragraph [ref=f5e200]: Workshops & codelabs on day one, the main conference on day two. Tentative — updated as sessions are confirmed.
+        - list [ref=f5e202]:
+          - listitem [ref=f5e203]:
+            - paragraph [ref=f5e204]: 9:00 AM – 9:30 AM
+            - generic [ref=f5e205]:
+              - heading "Registration" [level=3] [ref=f5e206]
+              - paragraph [ref=f5e207]: Break
+          - listitem [ref=f5e208]:
+            - paragraph [ref=f5e209]: 9:30 AM – 9:45 AM
+            - generic [ref=f5e210]:
+              - heading "Welcome to DevFest Ogbomoso 2026, Ground Rules" [level=3] [ref=f5e211]
+              - paragraph [ref=f5e212]: Talk
+              - paragraph [ref=f5e213]: Glory Olaifa
+          - listitem [ref=f5e214]:
+            - paragraph [ref=f5e215]: 9:45 AM – 10:15 AM
+            - generic [ref=f5e216]:
+              - heading "To be announced" [level=3] [ref=f5e217]
+              - paragraph [ref=f5e218]: To be announced
+          - listitem [ref=f5e219]:
+            - paragraph [ref=f5e220]: 10:15 AM – 10:35 AM
+            - generic [ref=f5e221]:
+              - heading "To be announced" [level=3] [ref=f5e222]
+              - paragraph [ref=f5e223]: To be announced
+        - link "See the full schedule" [ref=f5e224] [cursor=pointer]:
+          - /url: /schedule
+    - region [ref=f5e225]:
+      - generic [ref=f5e227]:
+        - heading "DevFest over the years" [level=2] [ref=f5e228]
+        - paragraph [ref=f5e229]: The energy, the people, the jollof, the pure tech vibes. A look back at every DevFest Ogbomoso so far.
+      - generic [ref=f5e230]:
+        - group "Photos from DevFest Ogbomoso, earlier years" [ref=f5e231]:
+          - generic [ref=f5e232]:
+            - list [ref=f5e233]:
+              - listitem [aria-hidden] [ref=f5e234]:
+                - generic [ref=f5e235]: "2019"
+              - listitem [ref=f5e236]:
+                - figure "Volunteers at the registration table" [ref=f5e237]:
+                  - img "Volunteers at the registration table at DevFest Ogbomoso 2019" [ref=f5e238]
+                  - generic [ref=f5e239]: "2019"
+              - listitem [ref=f5e241]:
+                - figure "An attendee beside the DevFest backdrop" [ref=f5e242]:
+                  - img "An attendee beside the DevFest backdrop at DevFest Ogbomoso 2019" [ref=f5e243]
+                  - generic [ref=f5e244]: "2019"
+              - listitem [ref=f5e246]:
+                - figure "Attendees gathering between sessions" [ref=f5e247]:
+                  - img "Attendees gathering between sessions at DevFest Ogbomoso 2019" [ref=f5e248]
+                  - generic [ref=f5e249]: "2019"
+              - listitem [ref=f5e251]:
+                - figure "An attendee posing at the photo backdrop" [ref=f5e252]:
+                  - img "An attendee posing at the photo backdrop at DevFest Ogbomoso 2019" [ref=f5e253]
+                  - generic [ref=f5e254]: "2019"
+              - listitem [ref=f5e256]:
+                - figure "A speaker addressing the room" [ref=f5e257]:
+                  - img "A speaker addressing the room at DevFest Ogbomoso 2019" [ref=f5e258]
+                  - generic [ref=f5e259]: "2019"
+              - listitem [ref=f5e261]:
+                - figure "Attendees having refreshments" [ref=f5e262]:
+                  - img "Attendees having refreshments at DevFest Ogbomoso 2019" [ref=f5e263]
+                  - generic [ref=f5e264]: "2019"
+              - listitem [aria-hidden] [ref=f5e266]:
+                - generic [ref=f5e267]: "2021"
+              - listitem [ref=f5e268]:
+                - figure "Attendees gathering in the conference hall" [ref=f5e269]:
+                  - img "Attendees gathering in the conference hall at DevFest Ogbomoso 2021" [ref=f5e270]
+                  - generic [ref=f5e271]: "2021"
+              - listitem [ref=f5e273]:
+                - figure "Attendees following a speaker's presentation" [ref=f5e274]:
+                  - img "Attendees following a speaker's presentation at DevFest Ogbomoso 2021" [ref=f5e275]
+                  - generic [ref=f5e276]: "2021"
+              - listitem [ref=f5e278]:
+                - figure "Attendees wearing their conference badges" [ref=f5e279]:
+                  - img "Attendees wearing their conference badges at DevFest Ogbomoso 2021" [ref=f5e280]
+                  - generic [ref=f5e281]: "2021"
+              - listitem [ref=f5e283]:
+                - figure "An attendee checking a phone near registration" [ref=f5e284]:
+                  - img "An attendee checking a phone near registration at DevFest Ogbomoso 2021" [ref=f5e285]
+                  - generic [ref=f5e286]: "2021"
+              - listitem [ref=f5e288]:
+                - figure "An attendee speaking into a microphone" [ref=f5e289]:
+                  - img "An attendee speaking into a microphone at DevFest Ogbomoso 2021" [ref=f5e290]
+                  - generic [ref=f5e291]: "2021"
+              - listitem [ref=f5e293]:
+                - figure "An attendee smiling in the audience" [ref=f5e294]:
+                  - img "An attendee smiling in the audience at DevFest Ogbomoso 2021" [ref=f5e295]
+                  - generic [ref=f5e296]: "2021"
+              - listitem [aria-hidden] [ref=f5e298]:
+                - generic [ref=f5e299]: "2022"
+              - listitem [ref=f5e300]:
+                - figure "An attendee receiving a conference souvenir" [ref=f5e301]:
+                  - img "An attendee receiving a conference souvenir at DevFest Ogbomoso 2022" [ref=f5e302]
+                  - generic [ref=f5e303]: "2022"
+              - listitem [ref=f5e305]:
+                - figure "Attendees seated in the conference hall" [ref=f5e306]:
+                  - img "Attendees seated in the conference hall at DevFest Ogbomoso 2022" [ref=f5e307]
+                  - generic [ref=f5e308]: "2022"
+              - listitem [ref=f5e310]:
+                - figure "Attendees following a presentation" [ref=f5e311]:
+                  - img "Attendees following a presentation at DevFest Ogbomoso 2022" [ref=f5e312]
+                  - generic [ref=f5e313]: "2022"
+              - listitem [ref=f5e315]:
+                - figure "A speaker in front of the DevFest backdrop" [ref=f5e316]:
+                  - img "A speaker in front of the DevFest backdrop at DevFest Ogbomoso 2022" [ref=f5e317]
+                  - generic [ref=f5e318]: "2022"
+              - listitem [ref=f5e320]:
+                - figure "A speaker at the conference podium" [ref=f5e321]:
+                  - img "A speaker at the conference podium at DevFest Ogbomoso 2022" [ref=f5e322]
+                  - generic [ref=f5e323]: "2022"
+              - listitem [ref=f5e325]:
+                - figure "Two attendees posing at the backdrop" [ref=f5e326]:
+                  - img "Two attendees posing at the backdrop at DevFest Ogbomoso 2022" [ref=f5e327]
+                  - generic [ref=f5e328]: "2022"
+            - list [aria-hidden] [ref=f5e330]:
+              - listitem [aria-hidden] [ref=f5e331]:
+                - generic [ref=f5e332]: "2019"
+              - listitem [ref=f5e333]:
+                - figure [ref=f5e334]:
+                  - generic [ref=f5e335]: "2019"
+                  - generic [ref=f5e336]: Volunteers at the registration table
+              - listitem [ref=f5e337]:
+                - figure [ref=f5e338]:
+                  - generic [ref=f5e339]: "2019"
+                  - generic [ref=f5e340]: An attendee beside the DevFest backdrop
+              - listitem [ref=f5e341]:
+                - figure [ref=f5e342]:
+                  - generic [ref=f5e343]: "2019"
+                  - generic [ref=f5e344]: Attendees gathering between sessions
+              - listitem [ref=f5e345]:
+                - figure [ref=f5e346]:
+                  - generic [ref=f5e347]: "2019"
+                  - generic [ref=f5e348]: An attendee posing at the photo backdrop
+              - listitem [ref=f5e349]:
+                - figure [ref=f5e350]:
+                  - generic [ref=f5e351]: "2019"
+                  - generic [ref=f5e352]: A speaker addressing the room
+              - listitem [ref=f5e353]:
+                - figure [ref=f5e354]:
+                  - generic [ref=f5e355]: "2019"
+                  - generic [ref=f5e356]: Attendees having refreshments
+              - listitem [aria-hidden] [ref=f5e357]:
+                - generic [ref=f5e358]: "2021"
+              - listitem [ref=f5e359]:
+                - figure [ref=f5e360]:
+                  - generic [ref=f5e361]: "2021"
+                  - generic [ref=f5e362]: Attendees gathering in the conference hall
+              - listitem [ref=f5e363]:
+                - figure [ref=f5e364]:
+                  - generic [ref=f5e365]: "2021"
+                  - generic [ref=f5e366]: Attendees following a speaker's presentation
+              - listitem [ref=f5e367]:
+                - figure [ref=f5e368]:
+                  - generic [ref=f5e369]: "2021"
+                  - generic [ref=f5e370]: Attendees wearing their conference badges
+              - listitem [ref=f5e371]:
+                - figure [ref=f5e372]:
+                  - generic [ref=f5e373]: "2021"
+                  - generic [ref=f5e374]: An attendee checking a phone near registration
+              - listitem [ref=f5e375]:
+                - figure [ref=f5e376]:
+                  - generic [ref=f5e377]: "2021"
+                  - generic [ref=f5e378]: An attendee speaking into a microphone
+              - listitem [ref=f5e379]:
+                - figure [ref=f5e380]:
+                  - generic [ref=f5e381]: "2021"
+                  - generic [ref=f5e382]: An attendee smiling in the audience
+              - listitem [aria-hidden] [ref=f5e383]:
+                - generic [ref=f5e384]: "2022"
+              - listitem [ref=f5e385]:
+                - figure [ref=f5e386]:
+                  - generic [ref=f5e387]: "2022"
+                  - generic [ref=f5e388]: An attendee receiving a conference souvenir
+              - listitem [ref=f5e389]:
+                - figure [ref=f5e390]:
+                  - generic [ref=f5e391]: "2022"
+                  - generic [ref=f5e392]: Attendees seated in the conference hall
+              - listitem [ref=f5e393]:
+                - figure [ref=f5e394]:
+                  - generic [ref=f5e395]: "2022"
+                  - generic [ref=f5e396]: Attendees following a presentation
+              - listitem [ref=f5e397]:
+                - figure [ref=f5e398]:
+                  - generic [ref=f5e399]: "2022"
+                  - generic [ref=f5e400]: A speaker in front of the DevFest backdrop
+              - listitem [ref=f5e401]:
+                - figure [ref=f5e402]:
+                  - generic [ref=f5e403]: "2022"
+                  - generic [ref=f5e404]: A speaker at the conference podium
+              - listitem [ref=f5e405]:
+                - figure [ref=f5e406]:
+                  - generic [ref=f5e407]: "2022"
+                  - generic [ref=f5e408]: Two attendees posing at the backdrop
+        - group "Photos from DevFest Ogbomoso, recent years" [ref=f5e409]:
+          - generic [ref=f5e410]:
+            - list [ref=f5e411]:
+              - listitem [aria-hidden] [ref=f5e412]:
+                - generic [ref=f5e413]: "2023"
+              - listitem [ref=f5e414]:
+                - figure "Attendees gathering at the registration table" [ref=f5e415]:
+                  - img "Attendees gathering at the registration table at DevFest Ogbomoso 2023" [ref=f5e416]
+                  - generic [ref=f5e417]: "2023"
+              - listitem [ref=f5e419]:
+                - figure "An attendee standing between rows of seats" [ref=f5e420]:
+                  - img "An attendee standing between rows of seats at DevFest Ogbomoso 2023" [ref=f5e421]
+                  - generic [ref=f5e422]: "2023"
+              - listitem [ref=f5e424]:
+                - figure "An attendee wearing a conference badge" [ref=f5e425]:
+                  - img "An attendee wearing a conference badge at DevFest Ogbomoso 2023" [ref=f5e426]
+                  - generic [ref=f5e427]: "2023"
+              - listitem [ref=f5e429]:
+                - figure "Participants posing together on stage" [ref=f5e430]:
+                  - img "Participants posing together on stage at DevFest Ogbomoso 2023" [ref=f5e431]
+                  - generic [ref=f5e432]: "2023"
+              - listitem [ref=f5e434]:
+                - figure "Attendees taking a selfie together" [ref=f5e435]:
+                  - img "Attendees taking a selfie together at DevFest Ogbomoso 2023" [ref=f5e436]
+                  - generic [ref=f5e437]: "2023"
+              - listitem [ref=f5e439]:
+                - figure "A group of attendees at the photo backdrop" [ref=f5e440]:
+                  - img "A group of attendees at the photo backdrop at DevFest Ogbomoso 2023" [ref=f5e441]
+                  - generic [ref=f5e442]: "2023"
+              - listitem [aria-hidden] [ref=f5e444]:
+                - generic [ref=f5e445]: "2024"
+              - listitem [ref=f5e446]:
+                - figure "Sodiq Akinjobi, GDG Regional Lead, delivering the keynote" [ref=f5e447]:
+                  - img "A speaker delivering the keynote to a packed hall" [ref=f5e448]
+                  - generic [ref=f5e449]: "2024"
+              - listitem [ref=f5e451]:
+                - figure "Faces of the attendees at DevFest '24" [ref=f5e452]:
+                  - img "Group photo of DevFest 2024 attendees" [ref=f5e453]
+                  - generic [ref=f5e454]: "2024"
+              - listitem [ref=f5e456]:
+                - figure "GDG Ogbomoso lead organizers with Sodiq Akinjobi" [ref=f5e457]:
+                  - img "GDG Ogbomoso lead organizers posing with a guest" [ref=f5e458]
+                  - generic [ref=f5e459]: "2024"
+              - listitem [ref=f5e461]:
+                - figure "LAUTECH past and present GDG on Campus leads" [ref=f5e462]:
+                  - img "Past and present LAUTECH GDG on Campus leads" [ref=f5e463]
+                  - generic [ref=f5e464]: "2024"
+              - listitem [ref=f5e466]:
+                - figure "The gaming session, live on Menti" [ref=f5e467]:
+                  - img "A host anchoring an audience quiz game" [ref=f5e468]
+                  - generic [ref=f5e469]: "2024"
+              - listitem [ref=f5e471]:
+                - figure "Organizers in action" [ref=f5e472]:
+                  - img "Collage of organizers on stage" [ref=f5e473]
+                  - generic [ref=f5e474]: "2024"
+              - listitem [aria-hidden] [ref=f5e476]:
+                - generic [ref=f5e477]: "2025"
+              - listitem [ref=f5e478]:
+                - figure "Two attendees looking at a phone near the backdrop" [ref=f5e479]:
+                  - img "Two attendees looking at a phone near the backdrop at DevFest Ogbomoso 2025" [ref=f5e480]
+                  - generic [ref=f5e481]: "2025"
+              - listitem [ref=f5e483]:
+                - figure "Attendees seated near the window" [ref=f5e484]:
+                  - img "Attendees seated near the window at DevFest Ogbomoso 2025" [ref=f5e485]
+                  - generic [ref=f5e486]: "2025"
+              - listitem [ref=f5e488]:
+                - figure "Attendees following a session" [ref=f5e489]:
+                  - img "Attendees following a session at DevFest Ogbomoso 2025" [ref=f5e490]
+                  - generic [ref=f5e491]: "2025"
+              - listitem [ref=f5e493]:
+                - figure "Two presenters leading a session" [ref=f5e494]:
+                  - img "Two presenters leading a session at DevFest Ogbomoso 2025" [ref=f5e495]
+                  - generic [ref=f5e496]: "2025"
+              - listitem [ref=f5e498]:
+                - figure "An attendee in front of the DevFest backdrop" [ref=f5e499]:
+                  - img "An attendee in front of the DevFest backdrop at DevFest Ogbomoso 2025" [ref=f5e500]
+                  - generic [ref=f5e501]: "2025"
+              - listitem [ref=f5e503]:
+                - figure "An attendee posing in front of the DevFest banner" [ref=f5e504]:
+                  - img "An attendee posing in front of the DevFest banner at DevFest Ogbomoso 2025" [ref=f5e505]
+                  - generic [ref=f5e506]: "2025"
+            - list [aria-hidden] [ref=f5e508]:
+              - listitem [aria-hidden] [ref=f5e509]:
+                - generic [ref=f5e510]: "2023"
+              - listitem [ref=f5e511]:
+                - figure [ref=f5e512]:
+                  - generic [ref=f5e513]: "2023"
+                  - generic [ref=f5e514]: Attendees gathering at the registration table
+              - listitem [ref=f5e515]:
+                - figure [ref=f5e516]:
+                  - generic [ref=f5e517]: "2023"
+                  - generic [ref=f5e518]: An attendee standing between rows of seats
+              - listitem [ref=f5e519]:
+                - figure [ref=f5e520]:
+                  - generic [ref=f5e521]: "2023"
+                  - generic [ref=f5e522]: An attendee wearing a conference badge
+              - listitem [ref=f5e523]:
+                - figure [ref=f5e524]:
+                  - generic [ref=f5e525]: "2023"
+                  - generic [ref=f5e526]: Participants posing together on stage
+              - listitem [ref=f5e527]:
+                - figure [ref=f5e528]:
+                  - generic [ref=f5e529]: "2023"
+                  - generic [ref=f5e530]: Attendees taking a selfie together
+              - listitem [ref=f5e531]:
+                - figure [ref=f5e532]:
+                  - generic [ref=f5e533]: "2023"
+                  - generic [ref=f5e534]: A group of attendees at the photo backdrop
+              - listitem [aria-hidden] [ref=f5e535]:
+                - generic [ref=f5e536]: "2024"
+              - listitem [ref=f5e537]:
+                - figure [ref=f5e538]:
+                  - generic [ref=f5e539]: "2024"
+                  - generic [ref=f5e540]: Sodiq Akinjobi, GDG Regional Lead, delivering the keynote
+              - listitem [ref=f5e541]:
+                - figure [ref=f5e542]:
+                  - generic [ref=f5e543]: "2024"
+                  - generic [ref=f5e544]: Faces of the attendees at DevFest '24
+              - listitem [ref=f5e545]:
+                - figure [ref=f5e546]:
+                  - generic [ref=f5e547]: "2024"
+                  - generic [ref=f5e548]: GDG Ogbomoso lead organizers with Sodiq Akinjobi
+              - listitem [ref=f5e549]:
+                - figure [ref=f5e550]:
+                  - generic [ref=f5e551]: "2024"
+                  - generic [ref=f5e552]: LAUTECH past and present GDG on Campus leads
+              - listitem [ref=f5e553]:
+                - figure [ref=f5e554]:
+                  - generic [ref=f5e555]: "2024"
+                  - generic [ref=f5e556]: The gaming session, live on Menti
+              - listitem [ref=f5e557]:
+                - figure [ref=f5e558]:
+                  - generic [ref=f5e559]: "2024"
+                  - generic [ref=f5e560]: Organizers in action
+              - listitem [aria-hidden] [ref=f5e561]:
+                - generic [ref=f5e562]: "2025"
+              - listitem [ref=f5e563]:
+                - figure [ref=f5e564]:
+                  - generic [ref=f5e565]: "2025"
+                  - generic [ref=f5e566]: Two attendees looking at a phone near the backdrop
+              - listitem [ref=f5e567]:
+                - figure [ref=f5e568]:
+                  - generic [ref=f5e569]: "2025"
+                  - generic [ref=f5e570]: Attendees seated near the window
+              - listitem [ref=f5e571]:
+                - figure [ref=f5e572]:
+                  - generic [ref=f5e573]: "2025"
+                  - generic [ref=f5e574]: Attendees following a session
+              - listitem [ref=f5e575]:
+                - figure [ref=f5e576]:
+                  - generic [ref=f5e577]: "2025"
+                  - generic [ref=f5e578]: Two presenters leading a session
+              - listitem [ref=f5e579]:
+                - figure [ref=f5e580]:
+                  - generic [ref=f5e581]: "2025"
+                  - generic [ref=f5e582]: An attendee in front of the DevFest backdrop
+              - listitem [ref=f5e583]:
+                - figure [ref=f5e584]:
+                  - generic [ref=f5e585]: "2025"
+                  - generic [ref=f5e586]: An attendee posing in front of the DevFest banner
+      - link "Explore all memories" [ref=f5e589] [cursor=pointer]:
+        - /url: /memories
+    - region [ref=f5e590]:
+      - generic [ref=f5e591]:
+        - img "Google Developer Groups Ogbomoso" [ref=f5e592]
+        - generic [ref=f5e593]:
+          - heading "The people behind DevFest" [level=2] [ref=f5e594]
+          - paragraph [ref=f5e595]: GDG Ogbomoso organizers and volunteers who give their time to make this happen.
+        - list [ref=f5e596]:
+          - listitem [ref=f5e597]:
+            - figure [ref=f5e598]:
+              - generic [ref=f5e600]:
+                - paragraph [ref=f5e601]: Miracle Olabode
+                - paragraph [ref=f5e602]: Lead Organizer
+          - listitem [ref=f5e603]:
+            - figure [ref=f5e604]:
+              - generic [ref=f5e606]:
+                - paragraph [ref=f5e607]: Boluwatife Adebisi
+                - paragraph [ref=f5e608]: Lead Organizer
+          - listitem [ref=f5e609]:
+            - figure [ref=f5e610]:
+              - generic [ref=f5e612]:
+                - paragraph [ref=f5e613]: Esuola Daniel
+                - paragraph [ref=f5e614]: Co-Organizer
+                - paragraph [ref=f5e615]: Design Lead
+          - listitem [ref=f5e616]:
+            - figure [ref=f5e617]:
+              - generic [ref=f5e619]:
+                - paragraph [ref=f5e620]: Glory Olaifa
+                - paragraph [ref=f5e621]: Co-Organizer
+                - paragraph [ref=f5e622]: Programs Lead
+          - listitem [ref=f5e623]:
+            - figure [ref=f5e624]:
+              - generic [ref=f5e626]:
+                - paragraph [ref=f5e627]: Blessed-Agboola Jesujoba
+                - paragraph [ref=f5e628]: Co-Organizer
+                - paragraph [ref=f5e629]: Media and Publicity Lead
+          - listitem [ref=f5e630]:
+            - figure [ref=f5e631]:
+              - generic [ref=f5e633]:
+                - paragraph [ref=f5e634]: Abdrahman Oladimeji
+                - paragraph [ref=f5e635]: Co-Organizer
+                - paragraph [ref=f5e636]: Dev Lead
+        - heading "Volunteers" [level=3] [ref=f5e637]
+        - paragraph [ref=f5e638]: 36 volunteers across 5 teams. Roles may be reassigned as needs arise.
+        - list [ref=f5e639]:
+          - listitem [ref=f5e640]:
+            - generic [ref=f5e641]:
+              - heading "Content Creation" [level=4] [ref=f5e642]
+              - generic [ref=f5e643]: 12 members
+            - paragraph [ref=f5e644]: Brand storytelling, live media coverage, design and post-event assets
+            - list [ref=f5e645]:
+              - listitem [ref=f5e646]:
+                - generic [ref=f5e648]:
+                  - paragraph [ref=f5e649]: Hiqmah Gbadero
+                  - paragraph [ref=f5e650]: Co-lead
+              - listitem [ref=f5e651]:
+                - generic [aria-hidden] [ref=f5e653]: JA
+                - generic [ref=f5e654]:
+                  - paragraph [ref=f5e655]: Joshua Adesanwo
+                  - paragraph [ref=f5e656]: Co-lead
+              - listitem [ref=f5e657]:
+                - generic [aria-hidden] [ref=f5e659]: EA
+                - generic [ref=f5e660]:
+                  - paragraph [ref=f5e661]: Elijah Ayanlere
+                  - paragraph [ref=f5e662]: Media lead
+            - list [ref=f5e665]:
+              - listitem [ref=f5e666]:
+                - generic [aria-hidden] [ref=f5e668]: AS
+                - text: Adedoyin Solomon
+              - listitem [ref=f5e669]:
+                - generic [aria-hidden] [ref=f5e671]: AE
+                - text: Anuoluwapo Esther
+              - listitem [ref=f5e672]:
+                - generic [aria-hidden] [ref=f5e674]: FI
+                - text: Fawaz Ishola
+              - listitem [ref=f5e675]:
+                - generic [aria-hidden] [ref=f5e677]: GA
+                - text: Gbolahan Adedamola
+              - listitem [ref=f5e678]:
+                - generic [aria-hidden] [ref=f5e680]: GA
+                - text: Goodness Ajayi
+              - listitem [ref=f5e681]:
+                - generic [aria-hidden] [ref=f5e683]: JJ
+                - text: Jesutobi Jesse Blessed-Agboola
+              - listitem [ref=f5e684]:
+                - generic [aria-hidden] [ref=f5e686]: JA
+                - text: Joel Akinrinde
+              - listitem [ref=f5e687]:
+                - generic [aria-hidden] [ref=f5e689]: JA
+                - text: Joshua Ayinla
+              - listitem [ref=f5e690]:
+                - generic [aria-hidden] [ref=f5e692]: MA
+                - text: Marvellous Adewuyi
+              - listitem [ref=f5e693]:
+                - generic [aria-hidden] [ref=f5e695]: PO
+                - text: Peace Ogunkeye
+              - listitem [ref=f5e696]:
+                - generic [aria-hidden] [ref=f5e698]: PE
+                - text: Paul Eniayewu
+              - listitem [ref=f5e699]:
+                - generic [aria-hidden] [ref=f5e701]: OB
+                - text: Omotayo Blessing
+            - group [ref=f5e702]:
+              - generic "What this team does+" [ref=f5e703] [cursor=pointer]
+          - listitem [ref=f5e704]:
+            - generic [ref=f5e705]:
+              - heading "Campus Liaison" [level=4] [ref=f5e706]
+              - generic [ref=f5e707]: 4 members
+            - paragraph [ref=f5e708]: Student body outreach, departmental publicity and student mobilization
+            - list [ref=f5e709]:
+              - listitem [ref=f5e710]:
+                - generic [ref=f5e712]:
+                  - paragraph [ref=f5e713]: Peter Awoniyi
+                  - paragraph [ref=f5e714]: Team lead
+            - list [ref=f5e717]:
+              - listitem [ref=f5e718]:
+                - generic [aria-hidden] [ref=f5e720]: IA
+                - text: Iminsioluwa Adedunmoye
+              - listitem [ref=f5e721]:
+                - generic [aria-hidden] [ref=f5e723]: MA
+                - text: Mahfuz Asafa
+              - listitem [ref=f5e724]:
+                - generic [aria-hidden] [ref=f5e726]: O
+                - text: Oluwapelumi
+            - group [ref=f5e727]:
+              - generic "What this team does+" [ref=f5e728] [cursor=pointer]
+          - listitem [ref=f5e729]:
+            - generic [ref=f5e730]:
+              - heading "Operations (General)" [level=4] [ref=f5e731]
+              - generic [ref=f5e732]: 9 members
+            - paragraph [ref=f5e733]: Venue setup, technical readiness, logistics, crowd flow and crowd safety
+            - generic [ref=f5e734]:
+              - generic [ref=f5e735]:
+                - paragraph [ref=f5e736]:
+                  - text: Logistics
+                  - generic [ref=f5e737]: "· Lead: Favour Adebisi"
+                - list [ref=f5e738]:
+                  - listitem [ref=f5e739]:
+                    - generic [aria-hidden] [ref=f5e741]: AF
+                    - text: Adetoye Festus Alvin
+                  - listitem [ref=f5e742]:
+                    - generic [aria-hidden] [ref=f5e744]: SA
+                    - text: Safia Abdoulaye
+              - generic [ref=f5e745]:
+                - paragraph [ref=f5e746]:
+                  - text: Welfare
+                  - generic [ref=f5e747]: "· Lead: Oladoyin Olaniyi"
+                - list [ref=f5e748]:
+                  - listitem [ref=f5e749]:
+                    - generic [aria-hidden] [ref=f5e751]: OE
+                    - text: Ogundapo Esther Eniola
+                  - listitem [ref=f5e752]:
+                    - generic [aria-hidden] [ref=f5e754]: OA
+                    - text: Omotolani Afolayan
+                  - listitem [ref=f5e755]:
+                    - generic [aria-hidden] [ref=f5e757]: FA
+                    - text: Fathia Abisola
+              - generic [ref=f5e758]:
+                - paragraph [ref=f5e759]: Technical
+                - list [ref=f5e760]:
+                  - listitem [ref=f5e761]:
+                    - generic [aria-hidden] [ref=f5e763]: OS
+                    - text: Oyeniyi Stephen
+                  - listitem [ref=f5e764]:
+                    - generic [aria-hidden] [ref=f5e766]: EW
+                    - text: Eyinade-Adekiitan Waliyat
+                  - listitem [ref=f5e767]:
+                    - generic [aria-hidden] [ref=f5e769]: EG
+                    - text: Enoch Gbadebo
+            - group [ref=f5e770]:
+              - generic "What this team does+" [ref=f5e771] [cursor=pointer]
+          - listitem [ref=f5e772]:
+            - generic [ref=f5e773]:
+              - heading "Operations (Registration)" [level=4] [ref=f5e774]
+              - generic [ref=f5e775]: 4 members
+            - paragraph [ref=f5e776]: Attendee check-in, badge and swag issuance, and real-time attendance tracking
+            - list [ref=f5e779]:
+              - listitem [ref=f5e780]:
+                - generic [aria-hidden] [ref=f5e782]: PA
+                - text: Peace Aina
+              - listitem [ref=f5e783]:
+                - generic [aria-hidden] [ref=f5e785]: TA
+                - text: Tolulope Ayodeji
+              - listitem [ref=f5e786]:
+                - generic [aria-hidden] [ref=f5e788]: ML
+                - text: Maimunat Lawal
+              - listitem [ref=f5e789]:
+                - generic [aria-hidden] [ref=f5e791]: PO
+                - text: Precious Oluwakemi
+            - group [ref=f5e792]:
+              - generic "What this team does+" [ref=f5e793] [cursor=pointer]
+          - listitem [ref=f5e794]:
+            - generic [ref=f5e795]:
+              - heading "Partnership (Speaker Support)" [level=4] [ref=f5e796]
+              - generic [ref=f5e797]: 7 members
+            - paragraph [ref=f5e798]: Speaker liaison, VIP hospitality, session timing and sponsor satisfaction
+            - list [ref=f5e799]:
+              - listitem [ref=f5e800]:
+                - generic [aria-hidden] [ref=f5e802]: HJ
+                - generic [ref=f5e803]:
+                  - paragraph [ref=f5e804]: Habeeb Jimoh
+                  - paragraph [ref=f5e805]: Co-lead
+              - listitem [ref=f5e806]:
+                - generic [aria-hidden] [ref=f5e808]: FA
+                - generic [ref=f5e809]:
+                  - paragraph [ref=f5e810]: Favour Alfred
+                  - paragraph [ref=f5e811]: Co-lead
+            - list [ref=f5e814]:
+              - listitem [ref=f5e815]:
+                - generic [aria-hidden] [ref=f5e817]: HO
+                - text: Helen Ogundipe
+              - listitem [ref=f5e818]:
+                - generic [aria-hidden] [ref=f5e820]: OI
+                - text: Oluwatosin Idowu
+              - listitem [ref=f5e821]:
+                - generic [aria-hidden] [ref=f5e823]: PA
+                - text: Precious Adewale
+              - listitem [ref=f5e824]: Ridwan Adewole
+              - listitem [ref=f5e826]:
+                - generic [aria-hidden] [ref=f5e828]: UO
+                - text: Ugochukwu Omenka
+              - listitem [ref=f5e829]:
+                - generic [aria-hidden] [ref=f5e831]: MA
+                - text: Mercy Adeyemo
+            - group [ref=f5e832]:
+              - generic "What this team does+" [ref=f5e833] [cursor=pointer]
+    - region [ref=f5e834]:
+      - generic [ref=f5e835]:
+        - generic [ref=f5e836]:
+          - generic [ref=f5e837]:
+            - heading "Show you're coming" [level=2] [ref=f5e838]
+            - paragraph [ref=f5e839]: Make your DevFest Ogbomoso 2026 DP in seconds, then share it so your friends know you'll be there.
+          - list [ref=f5e840]:
+            - listitem [ref=f5e841]:
+              - generic [ref=f5e842]: "1"
+              - text: Add your photo
+            - listitem [ref=f5e843]:
+              - generic [ref=f5e844]: "2"
+              - text: Type your name
+            - listitem [ref=f5e845]:
+              - generic [ref=f5e846]: "3"
+              - text: Download and share
+          - generic [ref=f5e847]:
+            - link "Create your DP" [ref=f5e848] [cursor=pointer]:
+              - /url: /dp
+            - paragraph [ref=f5e849]: Your photo stays on your device.
+        - generic [ref=f5e865]:
+          - paragraph [ref=f5e866]: I'm attending
+          - paragraph [ref=f5e867]: DevFest Ogbomoso 2026
+          - paragraph [ref=f5e868]: Your name
+    - region [ref=f5e869]:
+      - generic [ref=f5e870]:
+        - generic [ref=f5e871]:
+          - generic [ref=f5e872]:
+            - heading "Questions, answered" [level=2] [ref=f5e873]
+            - paragraph [ref=f5e874]: Can't find what you're looking for?
+          - paragraph [ref=f5e875]:
+            - text: Ask us on
+            - link "X (@gdgogbomoso) (opens in a new tab)" [ref=f5e876] [cursor=pointer]:
+              - /url: https://x.com/gdgogbomoso
+              - text: X (@gdgogbomoso)
+              - generic [ref=f5e877]: (opens in a new tab)
+            - text: .
+        - generic [ref=f5e878]:
+          - group [ref=f5e879]:
+            - generic "What is DevFest Ogbomoso?" [ref=f5e880] [cursor=pointer]
+          - group [ref=f5e882]:
+            - generic "When and where is it happening?" [ref=f5e883] [cursor=pointer]
+          - group [ref=f5e885]:
+            - generic "Who can attend?" [ref=f5e886] [cursor=pointer]
+          - group [ref=f5e888]:
+            - generic "How do I register?" [ref=f5e889] [cursor=pointer]
+          - group [ref=f5e891]:
+            - generic "What should I bring?" [ref=f5e892] [cursor=pointer]
+          - group [ref=f5e894]:
+            - generic "How should I conduct myself at the event?" [ref=f5e895] [cursor=pointer]
+          - group [ref=f5e897]:
+            - generic "Where can I get updates?" [ref=f5e898] [cursor=pointer]
+    - region [ref=f5e900]:
+      - generic [ref=f5e901]:
+        - generic [ref=f5e902]:
+          - heading "There's a seat for you." [level=2] [ref=f5e903]
+          - paragraph [ref=f5e904]: Saturday, October 17, 2026 in Ogbomoso, Oyo State. The Assembly.
+        - link "RSVP now (opens in a new tab)" [ref=f5e905] [cursor=pointer]:
+          - /url: https://gdg.community.dev/events/details/google-gdg-ogbomoso-presents-devfest-ogbomoso-2026/
+          - text: RSVP now
+          - generic [ref=f5e906]: (opens in a new tab)
+  - contentinfo [ref=f5e907]:
+    - generic [ref=f5e908]:
+      - generic [ref=f5e923]:
+        - generic [ref=f5e924]:
+          - link "DevFest Ogbomoso 2026 home" [ref=f5e925] [cursor=pointer]:
+            - /url: /
+            - img "DevFest Ogbomoso 2026" [ref=f5e926]
+          - paragraph [ref=f5e927]: A community-led developer conference by GDG Ogbomoso. Talks, workshops and the people building tech in Ogbomoso.
+          - link "RSVP now (opens in a new tab)" [ref=f5e928] [cursor=pointer]:
+            - /url: https://gdg.community.dev/events/details/google-gdg-ogbomoso-presents-devfest-ogbomoso-2026/
+            - text: RSVP now
+            - generic [ref=f5e929]: (opens in a new tab)
+          - img "Google Developer Groups Ogbomoso" [ref=f5e930]
+        - generic [ref=f5e931]:
+          - heading "When and where" [level=2] [ref=f5e932]
+          - list [ref=f5e933]:
+            - listitem [ref=f5e934]: Saturday, October 17, 2026
+            - listitem [ref=f5e937]: 8:00 AM – 5:15 PM (GMT+1)
+            - listitem [ref=f5e941]:
+              - generic [ref=f5e945]: The AssemblyOgbomoso, Oyo State
+        - generic [ref=f5e946]:
+          - heading "Explore" [level=2] [ref=f5e947]
+          - list [ref=f5e948]:
+            - listitem [ref=f5e949]:
+              - link "About" [ref=f5e950] [cursor=pointer]:
+                - /url: /#about
+            - listitem [ref=f5e951]:
+              - link "Speakers" [ref=f5e952] [cursor=pointer]:
+                - /url: /#speakers
+            - listitem [ref=f5e953]:
+              - link "Schedule" [ref=f5e954] [cursor=pointer]:
+                - /url: /#schedule
+            - listitem [ref=f5e955]:
+              - link "Team" [ref=f5e956] [cursor=pointer]:
+                - /url: /#team
+            - listitem [ref=f5e957]:
+              - link "Generate DP" [ref=f5e958] [cursor=pointer]:
+                - /url: /dp
+            - listitem [ref=f5e959]:
+              - link "FAQ" [ref=f5e960] [cursor=pointer]:
+                - /url: /#faqs
+            - listitem [ref=f5e961]:
+              - link "Memories" [ref=f5e962] [cursor=pointer]:
+                - /url: /memories
+            - listitem [ref=f5e963]:
+              - link "Gallery" [ref=f5e964] [cursor=pointer]:
+                - /url: /gallery
+            - listitem [ref=f5e965]:
+              - link "Code of conduct" [ref=f5e966] [cursor=pointer]:
+                - /url: /code-of-conduct
+          - list [ref=f5e967]:
+            - listitem [ref=f5e968]:
+              - link "GDG Ogbomoso on X" [ref=f5e969] [cursor=pointer]:
+                - /url: https://x.com/gdgogbomoso
+      - generic [ref=f5e972]:
+        - paragraph [ref=f5e973]: © 2026 GDG Ogbomoso. DevFest is a community-led event.
+        - paragraph [ref=f5e974]: Ogbomoso, Oyo State, Nigeria
+  - button "Open Next.js Dev Tools" [ref=f5e980] [cursor=pointer]
+  - alert [ref=f5e984]
