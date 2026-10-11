@@ -43,11 +43,11 @@ export const throwback = {
   ] satisfies Photo[],
 };
 
-/** Short highlight reel from DevFest Ogbomoso 2023 (silent, ~40s, 848×480). */
+/** Short highlight reel from DevFest Ogbomoso 2025 (silent, ~40s, 848×480). */
 export const recapVideo = {
-  src: "/video/devfest-2023-recap.mp4",
-  poster: "/video/devfest-2023-recap-poster.jpg",
-  year: 2023,
+  src: "/video/devfest-recap.mp4",
+  poster: "/video/devfest-recap-poster.png",
+  year: 2025,
 };
 
 export interface PastSpeaker {
