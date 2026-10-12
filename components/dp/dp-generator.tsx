@@ -104,7 +104,15 @@ export function DpGenerator() {
   }, []);
 
   const toBlob = () =>
-    new Promise<Blob | null>((resolve) => canvasRef.current?.toBlob(resolve, "image/png") ?? resolve(null));
+    new Promise<Blob | null>((resolve) => {
+      const canvas = canvasRef.current;
+      if (!canvas) return resolve(null);
+      try {
+        canvas.toBlob(resolve, "image/png");
+      } catch {
+        resolve(null);
+      }
+    });
 
   async function download() {
     const blob = await toBlob();
@@ -113,8 +121,10 @@ export function DpGenerator() {
     const a = document.createElement("a");
     a.href = url;
     a.download = dp.fileName;
+    document.body.appendChild(a);
     a.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 10_000);
     setMessage("Downloaded. Share it and tag @gdgogbomoso.");
   }
 
