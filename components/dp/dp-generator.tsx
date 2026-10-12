@@ -26,7 +26,7 @@ export function DpGenerator() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const fileInput = useRef<HTMLInputElement>(null);
   const drag = useRef<{ x: number; y: number } | null>(null);
-  const ids = { name: useId(), zoom: useId(), x: useId(), y: useId(), bg: useId(), fg: useId() };
+  const ids = { name: useId(), zoom: useId(), x: useId(), y: useId(), bg: useId(), fg: useId(), accent: useId() };
 
   const [photo, setPhoto] = useState<Drawable | null>(null);
   const [zoom, setZoom] = useState(1);
@@ -36,7 +36,7 @@ export function DpGenerator() {
   const [frameImage, setFrameImage] = useState<HTMLImageElement | null>(null);
   const [message, setMessage] = useState("");
   const [themeId, setThemeId] = useState<string>(dpThemes[0]!.id);
-  const [custom, setCustom] = useState({ bg: dpThemes[0]!.bg[0], fg: dpThemes[0]!.text });
+  const [custom, setCustom] = useState({ bg: dpThemes[0]!.bg[0], fg: dpThemes[0]!.text, accent: dpThemes[0]!.accent });
   const canShare = useSyncExternalStore(noopSubscribe, canShareFiles, () => false);
 
   // Load the site fonts (for canvas text) and any official frame artwork once.
@@ -62,10 +62,11 @@ export function DpGenerator() {
   }, []);
 
   const theme = useMemo(
-    () => (themeId === "custom" ? customTheme(custom.bg, custom.fg) : (dpThemes.find((t) => t.id === themeId) ?? dpThemes[0]!)),
+    () => (themeId === "custom" ? customTheme(custom.bg, custom.fg, custom.accent) : (dpThemes.find((t) => t.id === themeId) ?? dpThemes[0]!)),
     [themeId, custom],
   );
   const lowContrast = contrast(theme.text, theme.bg[0]) < 3;
+  const lowAccentContrast = contrast(theme.accent, theme.bg[0]) < 3;
 
   useEffect(() => {
     const ctx = canvasRef.current?.getContext("2d");
@@ -75,7 +76,7 @@ export function DpGenerator() {
 
   /** Switch to a custom theme, seeding whichever colour wasn't touched from the current theme. */
   function updateCustom(patch: Partial<typeof custom>) {
-    setCustom({ bg: theme.bg[0], fg: theme.text, ...patch });
+    setCustom({ bg: theme.bg[0], fg: theme.text, accent: theme.accent, ...patch });
     setThemeId("custom");
   }
 
@@ -291,7 +292,7 @@ export function DpGenerator() {
             </label>
           </div>
 
-          <div className="mt-5 grid grid-cols-2 gap-4">
+          <div className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3">
             <div>
               <label htmlFor={ids.bg} className={labelClass}>
                 Background
@@ -316,9 +317,25 @@ export function DpGenerator() {
                 className="mt-2 h-11 w-full cursor-pointer rounded-xl border border-line bg-surface p-1"
               />
             </div>
+            <div>
+              <label htmlFor={ids.accent} className={labelClass}>
+                Name &amp; ring
+              </label>
+              <input
+                id={ids.accent}
+                type="color"
+                value={theme.accent}
+                onChange={(e) => updateCustom({ accent: e.target.value })}
+                className="mt-2 h-11 w-full cursor-pointer rounded-xl border border-line bg-surface p-1"
+              />
+            </div>
           </div>
           <p role="status" className="mt-2 min-h-5 text-sm text-google-red-text">
-            {lowContrast ? "These colours are hard to read together. Try a lighter or darker foreground." : ""}
+            {lowContrast
+              ? "These colours are hard to read together. Try a lighter or darker foreground."
+              : lowAccentContrast
+                ? "Your name and the ring are hard to see on this background. Try a lighter or darker colour."
+                : ""}
           </p>
         </fieldset>
 
