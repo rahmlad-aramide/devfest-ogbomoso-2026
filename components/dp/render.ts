@@ -55,18 +55,19 @@ export function contrast(a: string, b: string) {
 }
 
 /**
- * Build a theme from a custom background and foreground. Keeps the base theme's accent and
- * shape colours where they stay visible on the new background, and falls back to the
- * foreground colour where they wouldn't.
+ * Build a theme from a custom background, foreground and accent. The accent (the name and the
+ * ring around the photo) is exactly the colour the user picked; the background never changes it.
+ * Shape colours keep the base theme's where they stay visible on the new background, and fall
+ * back to the foreground colour where they wouldn't.
  */
-export function customTheme(bg: string, fg: string, base: DpTheme = dpThemes[0]!): DpTheme {
+export function customTheme(bg: string, fg: string, accent: string, base: DpTheme = dpThemes[0]!): DpTheme {
   const visible = (c: string, min: number) => (contrast(c, bg) >= min ? c : fg);
   return {
     id: "custom",
     label: "Custom",
     bg: [bg, mix(bg, luminance(bg) > 0.5 ? "#000000" : "#ffffff", 0.14)],
     text: fg,
-    accent: visible(base.accent, 3),
+    accent,
     glyphs: base.glyphs.map((g) => visible(g, 2)) as DpTheme["glyphs"],
   };
 }
