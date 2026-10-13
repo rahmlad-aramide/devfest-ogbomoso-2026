@@ -20,6 +20,7 @@ export const volunteerPhotos: Record<string, string> = {
   "Hiqmah Gbadero": "/images/team/gbadero-hiqmah-fadeke.webp",
   "Peter Awoniyi": "/images/team/peter-awoniyi.webp",
   "Ridwan Adewole": "/images/team/adewole-ridwan.webp",
+  "Elijah Ayanlere": "/images/team/elijah-ayanlere.webp",
 };
 
 /**
@@ -40,7 +41,6 @@ export const volunteerTeams: VolunteerTeam[] = [
     leads: [
       { name: "Hiqmah Gbadero", photo: volunteerPhotos["Hiqmah Gbadero"] },
       { name: "Joshua Adesanwo" },
-      { name: "Elijah Ayanlere", label: "Media" },
     ],
     groups: [
       {
@@ -77,11 +77,10 @@ export const volunteerTeams: VolunteerTeam[] = [
   },
   {
     name: "Operations (General)",
-    focus: "Venue setup, technical readiness, logistics, crowd flow and crowd safety",
+    focus: "Venue setup, logistics, crowd flow and crowd safety",
     purpose:
       "Orchestrate the physical and logistical side of the venue so the event runs smoothly from setup to load-out.",
     duties: [
-      "Stage, seating, lighting and audio-visual setup across the main hall and breakout rooms",
       "Crowd movement, directional signage and crowd safety",
       "Vendor deliveries, refreshments and water stations, and power backups",
       "Rapid incident response and troubleshooting on both event days",
@@ -90,8 +89,18 @@ export const volunteerTeams: VolunteerTeam[] = [
     groups: [
       { name: "Logistics", lead: { name: "Favour Adebisi" }, members: ["Adetoye Festus Alvin", "Safia Abdoulaye", "Favour Adebisi"] },
       { name: "Welfare", lead: { name: "Oladoyin Olaniyi" }, members: ["Ogundapo Esther Eniola", "Omotolani Afolayan", "Fathia Abisola"] },
-      { name: "Technical", members: ["Oyeniyi Stephen", "Eyinade-Adekiitan Waliyat", "Enoch Gbadebo"] },
     ],
+  },
+  {
+    name: "Technical",
+    focus: "Venue setup, technical readiness, and stage, lighting and audio-visual setup",
+    purpose: "",
+    duties: [
+      "Stage, seating, lighting and audio-visual setup across the main hall and breakout rooms",
+      "Rapid incident response and troubleshooting on both event days",
+    ],
+    leads: [{ name: "Elijah Ayanlere", photo: volunteerPhotos["Elijah Ayanlere"] }],
+    groups: [{ members: ["Elijah Ayanlere", "Oyeniyi Stephen", "Eyinade-Adekiitan Waliyat", "Enoch Gbadebo"] }],
   },
   {
     name: "Operations (Registration)",
