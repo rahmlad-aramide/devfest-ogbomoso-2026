@@ -126,7 +126,7 @@ function VolunteerCard({ unit }: { unit: VolunteerTeam }) {
         <summary className="cursor-pointer font-semibold text-link marker:content-none after:ml-1 after:content-['+'] group-open:after:content-['\2212']">
           What this team does
         </summary>
-        <p className="mt-3 text-muted">{unit.purpose}</p>
+        {unit.purpose ? <p className="mt-3 text-muted">{unit.purpose}</p> : null}
         <ul className="mt-3 list-disc space-y-1.5 pl-5 text-ink">
           {unit.duties.map((d) => (
             <li key={d}>{d}</li>
