@@ -92,7 +92,7 @@ export const event = {
    */
   heroImage: "/images/crowd-bw.webp",
 
-  /** Registration happens on the GDG Bevy platform. Every RSVP button uses this. */
+  /** Registration happens on the GDG Bevy platform. Every RSVP button uses this, except the hero's day cards (`days[].rsvpUrl`). */
   rsvpUrl: "https://gdg.community.dev/events/details/google-gdg-ogbomoso-presents-devfest-ogbomoso-2026/",
   rsvpLabel: "RSVP now",
 
