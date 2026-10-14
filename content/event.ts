@@ -17,6 +17,9 @@ const days = [
       name: "SQI College of ICT",
       address: "Opposite Yoaco Filling Station, Yoaco, Ogbomoso",
     },
+    /** Day 1 has its own Bevy event. Used by the RSVP button on the hero's day 1 card. */
+    rsvpUrl:
+      "https://gdg.community.dev/events/details/google-gdg-ogbomoso-presents-devfest-ogbomoso-2026-day-1-workshop-edition/",
   },
   {
     day: 2,
@@ -27,6 +30,8 @@ const days = [
       name: "The Assembly",
       address: "Beside LAUTECH, Ogbomoso - Ilorin Rd., Oyo State, Nigeria",
     },
+    /** Same Bevy event as `event.rsvpUrl` below. Used by the RSVP button on the hero's day 2 card. */
+    rsvpUrl: "https://gdg.community.dev/events/details/google-gdg-ogbomoso-presents-devfest-ogbomoso-2026/",
   },
 ] as const;
 

@@ -1,6 +1,8 @@
 import { Clock, MapPin } from "lucide-react";
 import Image from "next/image";
 import { Container } from "@/components/ui/container";
+import { UnlessEnded } from "@/components/ui/event-phase";
+import { RsvpButton } from "@/components/ui/rsvp-button";
 import { event } from "@/content/event";
 import { formatDayHours, formatDayParts } from "@/lib/format";
 import { HeroArt } from "./hero-art";
@@ -82,6 +84,11 @@ export function Hero({ videoBackground = false }: HeroProps) {
                       {d.venue.name}
                     </li>
                   </ul>
+                  <UnlessEnded>
+                    <RsvpButton href={d.rsvpUrl} variant="accent" className="mt-4 w-full">
+                      RSVP<span className="sr-only"> for Day {d.day}</span>
+                    </RsvpButton>
+                  </UnlessEnded>
                 </li>
               );
             })}

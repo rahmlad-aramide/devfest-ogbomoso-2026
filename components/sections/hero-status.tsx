@@ -2,7 +2,6 @@
 
 import { ButtonLink } from "@/components/ui/button";
 import { useEventPhase } from "@/components/ui/event-phase";
-import { RsvpButton } from "@/components/ui/rsvp-button";
 import { event } from "@/content/event";
 import { getEventPhase, getLiveDay, getTimeLeft } from "@/lib/event-status";
 import { formatDayDate, formatDayTimeRange } from "@/lib/format";
@@ -21,13 +20,12 @@ export function HeroActions() {
 
   return (
     <div className="mt-8 flex flex-wrap gap-3">
+      {/* Before the event, RSVP lives on each day card in the hero. */}
       {ended ? (
         <ButtonLink href="/#throwback" variant="accent" size="lg">
           See past highlights
         </ButtonLink>
-      ) : (
-        <RsvpButton variant="accent" size="lg" />
-      )}
+      ) : null}
       <ButtonLink href="/#about" variant="outline-inverse" size="lg">
         What to expect
       </ButtonLink>
