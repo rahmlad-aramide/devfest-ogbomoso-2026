@@ -100,7 +100,7 @@ export const volunteerTeams: VolunteerTeam[] = [
       "Rapid incident response and troubleshooting on both event days",
     ],
     leads: [{ name: "Elijah Ayanlere", photo: volunteerPhotos["Elijah Ayanlere"] }],
-    groups: [{ members: ["Elijah Ayanlere", "Oyeniyi Stephen", "Eyinade-Adekiitan Waliyat", "Enoch Gbadebo"] }],
+    groups: [{ members: ["Elijah Ayanlere", "Oyeniyi Stephen", "Maimunat Lawal", "Enoch Gbadebo"] }],
   },
   {
     name: "Operations (Registration)",
@@ -113,7 +113,7 @@ export const volunteerTeams: VolunteerTeam[] = [
       "Giving hourly check-in counts to the core operations team",
     ],
     leads: [],
-    groups: [{ members: ["Peace Aina", "Tolulope Ayodeji", "Maimunat Lawal", "Precious Oluwakemi"] }],
+    groups: [{ members: ["Peace Aina", "Tolulope Ayodeji", "Eyinade-Adekiitan Waliyat", "Precious Oluwakemi"] }],
   },
   {
     name: "Partnership (Speaker Support)",
