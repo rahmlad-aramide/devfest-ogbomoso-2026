@@ -5,7 +5,7 @@ import type { Speaker } from "./types";
  * (public/images/speakers-2026/Speaker 1.png … Speaker 15.png, checked 2026-10-07). Photos are
  * cropped from those same graphics. `sessionIds` link back to content/schedule.ts.
  *
- * Glory Olaifa (day 1 welcome) and Sodiq Akinjobi (day 2 keynote) have no announcement graphic
+ * Glory Olaifa (day 1 welcome) has no announcement graphic
  * yet, so they stay as plain `speakerNames` on their sessions until a photo/profile exists.
  */
 export const speakers: Speaker[] = [
@@ -15,7 +15,7 @@ export const speakers: Speaker[] = [
     role: "GDE",
     company: "Flutter & Dart",
     photo: "/images/speakers-2026/samuel-abada.webp",
-    sessionIds: ["d1-track1-agent-skills"],
+    sessionIds: ["d1-b1-agent-skills"],
   },
   {
     id: "david-oluwabusayo",
@@ -23,14 +23,14 @@ export const speakers: Speaker[] = [
     role: "CTO",
     company: "Paperless",
     photo: "/images/speakers-2026/david-oluwabusayo.webp",
-    sessionIds: ["d1-track1-on-device-ai-flutter"],
+    sessionIds: ["d1-b2-gemini-flutter"],
   },
   {
     id: "mbaoma-mary",
     name: "Mary Mbaoma",
     role: "Cloud Engineer",
     photo: "/images/speakers-2026/mbaoma-mary.webp",
-    sessionIds: ["d1-track1-auto-mode-vpc"],
+    sessionIds: ["d1-b1-auto-mode-vpc"],
   },
   {
     id: "dami-oshun",
@@ -38,7 +38,7 @@ export const speakers: Speaker[] = [
     role: "Software Engineer",
     company: "Seamless Technologies",
     photo: "/images/speakers-2026/dami-oshun.webp",
-    sessionIds: ["d1-track2-context-engineering-adk"],
+    sessionIds: ["d1-b2-context-engineering-adk"],
   },
   {
     id: "auwal-ms",
@@ -46,7 +46,7 @@ export const speakers: Speaker[] = [
     role: "Lead, Developer Relations & Integrations",
     company: "Moniepoint Group",
     photo: "/images/speakers-2026/auwal-ms.webp",
-    sessionIds: ["d1-track2-hybrid-ai-web"],
+    sessionIds: ["d1-b1-hybrid-ai-web", "d2-keynote"],
   },
   {
     id: "miracle-olabode",
@@ -54,7 +54,7 @@ export const speakers: Speaker[] = [
     role: "GDE",
     company: "Google Cloud",
     photo: "/images/speakers-2026/miracle-olabode.webp",
-    sessionIds: ["d1-track2-antigravity-pipelines"],
+    sessionIds: ["d1-b3-secure-multi-agent"],
   },
   {
     id: "mustapha-adekunle",
@@ -62,14 +62,14 @@ export const speakers: Speaker[] = [
     role: "GDE",
     company: "Google Cloud",
     photo: "/images/speakers-2026/mustapha-adekunle.webp",
-    sessionIds: ["d1-track3-antigravity-cli"],
+    sessionIds: ["d1-b3-antigravity-cli"],
   },
   {
     id: "christopher-nwosu-madueke",
     name: "Christopher Nwosu-Madueke",
     role: "Senior Mobile Engineer",
     photo: "/images/speakers-2026/christopher-nwosu-madueke.webp",
-    sessionIds: ["d1-track3-flutter-telemetry"],
+    sessionIds: ["d1-b3-flutter-telemetry"],
   },
   {
     id: "saheed-adewumi",
@@ -77,7 +77,7 @@ export const speakers: Speaker[] = [
     role: "CTO & Co-Founder",
     company: "QT Solution Services · GDE, Cloud AI",
     photo: "/images/speakers-2026/saheed-adewumi.webp",
-    sessionIds: ["d1-track3-cloud-sql-webapp"],
+    sessionIds: ["d1-b2-cloud-sql-webapp"],
   },
   {
     id: "kehinde-quyum",
