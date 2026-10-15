@@ -11,8 +11,8 @@ const days = [
   {
     day: 1,
     label: "Workshops & Codelabs",
-    start: "2026-10-16T09:00:00+01:00",
-    end: "2026-10-16T15:50:00+01:00",
+    start: "2026-10-16T08:30:00+01:00",
+    end: "2026-10-16T15:10:00+01:00",
     venue: {
       name: "SQI College of ICT",
       address: "Opposite Yoaco Filling Station, Yoaco, Ogbomoso",
@@ -24,8 +24,8 @@ const days = [
   {
     day: 2,
     label: "Main Conference",
-    start: "2026-10-17T08:00:00+01:00",
-    end: "2026-10-17T17:15:00+01:00",
+    start: "2026-10-17T09:00:00+01:00",
+    end: "2026-10-17T15:35:00+01:00",
     venue: {
       name: "The Assembly",
       address: "Beside LAUTECH, Ogbomoso - Ilorin Rd., Oyo State, Nigeria",

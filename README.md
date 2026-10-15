@@ -1,7 +1,7 @@
 # DevFest Ogbomoso 2026
 
 Official website for DevFest Ogbomoso 2026, hosted by GDG Ogbomoso.
-**Saturday, 17 October 2026 · 9:00 AM – 4:00 PM (GMT+1) · Ogbomoso, Oyo State.**
+**Saturday, 17 October 2026 · 9:00 AM – 3:35 PM (GMT+1) · Ogbomoso, Oyo State.**
 
 Built with Next.js 16 (App Router), React 19, Tailwind CSS v4 and TypeScript.
 

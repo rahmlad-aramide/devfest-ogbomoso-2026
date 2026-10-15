@@ -14,7 +14,7 @@ const published = event.sections.schedule === "published" && schedule.length > 0
 export const metadata = pageMetadata({
   title: "Schedule",
   description: published
-    ? `The tentative two-day ${event.fullName} agenda: workshops & codelabs, then the main conference.`
+    ? `The two-day ${event.fullName} agenda: workshops & codelabs, then the main conference.`
     : `The ${event.fullName} agenda is coming soon. ${formatEventDate()}, ${formatEventTimeRange()}.`,
   path: "/schedule",
   noindex: !published,
@@ -28,7 +28,7 @@ export default function SchedulePage() {
         title={published ? "Schedule" : "Schedule coming soon"}
         description={
           published
-            ? "Two days: workshops & codelabs, then the main conference. Tentative — details will be updated as they're confirmed."
+            ? "Two days: workshops & codelabs, then the main conference."
             : `${formatEventDate()}, ${formatEventTimeRange()}`
         }
         glyph="double-slash"

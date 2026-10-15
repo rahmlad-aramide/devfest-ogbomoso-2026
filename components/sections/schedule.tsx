@@ -19,7 +19,7 @@ export function Schedule() {
             <SectionHeading
               id="schedule-title"
               title="Two days, block by block"
-              description="Workshops & codelabs on day one, the main conference on day two. Tentative — updated as sessions are confirmed."
+              description="Workshops & codelabs on day one, the main conference on day two."
             />
             <div className="mt-12">
               <Timeline sessions={schedule.slice(0, PREVIEW_COUNT)} />
