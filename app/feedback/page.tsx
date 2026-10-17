@@ -1,5 +1,6 @@
 import { JsonLd } from "@/components/seo/json-ld";
 import { Container } from "@/components/ui/container";
+import { FeedbackQr } from "@/components/ui/feedback-qr";
 import { PageHeader } from "@/components/ui/page-header";
 import { event } from "@/content/event";
 import { pageMetadata } from "@/lib/seo";
@@ -22,6 +23,9 @@ export default function FeedbackPage() {
         glyphColor="text-google-green"
       />
       <Container className="max-w-3xl py-10 sm:py-14">
+        <div className="mb-10 flex justify-center">
+          <FeedbackQr size={320} />
+        </div>
         <iframe
           src={event.feedback.embedUrl}
           title={`${event.fullName} feedback form`}
