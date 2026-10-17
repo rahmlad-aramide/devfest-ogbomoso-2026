@@ -37,10 +37,6 @@ export function Hero({ videoBackground = false }: HeroProps) {
       />
       <Container className="grid items-center gap-12 py-12 sm:py-16 lg:grid-cols-[1.1fr_1fr] lg:py-16">
         <div>
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm font-semibold backdrop-blur">
-            <span className="size-2 rounded-full bg-google-yellow" aria-hidden="true" />
-            Two days · {formatDayParts(1).month} {formatDayParts(1).date}–{formatDayParts(2).date}, {event.year}
-          </p>
           <h1
             id="hero-title"
             className="font-display text-[clamp(3.25rem,9.5vw,7.25rem)] leading-[0.88] font-extrabold tracking-tighter"

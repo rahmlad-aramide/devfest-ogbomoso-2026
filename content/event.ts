@@ -96,6 +96,13 @@ export const event = {
   rsvpUrl: "https://gdg.community.dev/events/details/google-gdg-ogbomoso-presents-devfest-ogbomoso-2026/",
   rsvpLabel: "RSVP now",
 
+  /** Attendee feedback form (Google Forms). `url` is the shareable link, `embedUrl` is what /feedback iframes. */
+  feedback: {
+    url: "https://forms.gle/vzEXnLW2SABoMBPs6",
+    embedUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLSfc-rWSSemx4XXvw_KjkcMExnpF99bICI55-mSnY-4OSYHXhw/viewform?embedded=true",
+  },
+
   /** Key themes as listed on Bevy. */
   themes: ["AI", "Gemini", "Gemini Enterprise Agent Platform"],
   formats: ["Conference", "Workshop / hands-on sessions"],

@@ -88,6 +88,7 @@ export const sitemapRoutes: Array<{
   { path: "/speakers", priority: 0.8, changeFrequency: "weekly", indexable: event.sections.speakers === "published" },
   { path: "/schedule", priority: 0.8, changeFrequency: "weekly", indexable: event.sections.schedule === "published" },
   { path: "/dp", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/feedback", priority: 0.5, changeFrequency: "monthly" },
   { path: "/memories", priority: 0.5, changeFrequency: "yearly" },
   { path: "/gallery", priority: 0.5, changeFrequency: "yearly" },
   { path: "/code-of-conduct", priority: 0.4, changeFrequency: "yearly" },
