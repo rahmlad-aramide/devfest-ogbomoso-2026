@@ -26,8 +26,8 @@ export function HeroActions() {
           See past highlights
         </ButtonLink>
       ) : null}
-      <ButtonLink href="/#about" variant="outline-inverse" size="lg">
-        What to expect
+      <ButtonLink href="/feedback" variant="outline-inverse" size="lg">
+        Got any feedback? Let us know
       </ButtonLink>
     </div>
   );

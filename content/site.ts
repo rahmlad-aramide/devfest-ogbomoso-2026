@@ -45,6 +45,7 @@ export const nav: NavItem[] = [
 /** Extra footer links for pages that aren't part of the main navigation. */
 export const secondaryNav: NavItem[] = [
   { label: "FAQ", href: "/#faqs" },
+  { label: "Feedback", href: "/feedback" },
   { label: "Memories", href: "/memories" },
   { label: "Gallery", href: "/gallery" },
   { label: "Code of conduct", href: "/code-of-conduct" },

@@ -3,7 +3,7 @@ import { event } from "./content/event";
 
 /**
  * Content-Security-Policy. Everything is self-hosted (fonts are inlined by next/font at build time),
- * so nothing external is allowed. `'unsafe-inline'` is needed for Next's inline bootstrap scripts and
+ * so nothing external is allowed except the Google Forms embed on /feedback. `'unsafe-inline'` is needed for Next's inline bootstrap scripts and
  * styles on statically rendered pages. Skipped in development, where React needs `eval`.
  */
 const csp = [
@@ -12,6 +12,7 @@ const csp = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self'",
+  "frame-src https://docs.google.com",
   "media-src 'self'",
   "connect-src 'self'",
   "object-src 'none'",
